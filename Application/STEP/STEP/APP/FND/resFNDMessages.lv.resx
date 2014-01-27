@@ -228,4 +228,16 @@
   <data name="strAddCreateMissHost" xml:space="preserve">
     <value>Lūdzu ievadiet datu bāzes Host/IP nosaukumu.</value>
   </data>
+  <data name="strConnServer" xml:space="preserve">
+    <value>Servera DB</value>
+  </data>
+  <data name="strConnLocal" xml:space="preserve">
+    <value>Vietēja DB</value>
+  </data>
+  <data name="strAddCreateTestOK" xml:space="preserve">
+    <value>Datu bāze ir pieejama (Tests izdevies).</value>
+  </data>
+  <data name="strAddCreateTestFailed" xml:space="preserve">
+    <value>Datu bāze nav pieejama ar dotajiem parametriem (Tests neizdevās).</value>
+  </data>
 </root>

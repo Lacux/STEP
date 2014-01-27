@@ -126,7 +126,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lb_DB_name.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>12</value>
   </data>
   <data name="lb_DB_name.Text" xml:space="preserve">
     <value>lb_DB_name</value>
@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_DB_name.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="lb_DB_address.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 152</value>
@@ -150,7 +150,7 @@
     <value>120, 23</value>
   </data>
   <data name="lb_DB_address.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>13</value>
   </data>
   <data name="lb_DB_address.Text" xml:space="preserve">
     <value>lb_DB_address</value>
@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_DB_address.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lb_DB_host.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 180</value>
@@ -174,7 +174,7 @@
     <value>120, 23</value>
   </data>
   <data name="lb_DB_host.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>14</value>
   </data>
   <data name="lb_DB_host.Text" xml:space="preserve">
     <value>lb_DB_host</value>
@@ -189,7 +189,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_DB_host.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="lb_DB_type.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 94</value>
@@ -198,7 +198,7 @@
     <value>120, 23</value>
   </data>
   <data name="lb_DB_type.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>11</value>
   </data>
   <data name="lb_DB_type.Text" xml:space="preserve">
     <value>lb_DB_type</value>
@@ -213,7 +213,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_DB_type.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="cb_db_type.Items" xml:space="preserve">
     <value>Viena lietotāja datu bāze</value>
@@ -228,7 +228,7 @@
     <value>299, 24</value>
   </data>
   <data name="cb_db_type.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;cb_db_type.Name" xml:space="preserve">
     <value>cb_db_type</value>
@@ -240,7 +240,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cb_db_type.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="tb_db_name.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 121</value>
@@ -249,7 +249,7 @@
     <value>299, 22</value>
   </data>
   <data name="tb_db_name.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;tb_db_name.Name" xml:space="preserve">
     <value>tb_db_name</value>
@@ -261,7 +261,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tb_db_name.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="tb_db_address.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 149</value>
@@ -270,7 +270,7 @@
     <value>247, 22</value>
   </data>
   <data name="tb_db_address.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;tb_db_address.Name" xml:space="preserve">
     <value>tb_db_address</value>
@@ -282,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tb_db_address.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="tb_db_host.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 177</value>
@@ -291,7 +291,7 @@
     <value>299, 22</value>
   </data>
   <data name="tb_db_host.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;tb_db_host.Name" xml:space="preserve">
     <value>tb_db_host</value>
@@ -303,7 +303,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tb_db_host.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bt_add_address.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -316,7 +316,7 @@
     <value>46, 25</value>
   </data>
   <data name="bt_add_address.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;bt_add_address.Name" xml:space="preserve">
     <value>bt_add_address</value>
@@ -328,7 +328,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bt_add_address.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="pg_bd_info.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 236</value>
@@ -337,7 +337,7 @@
     <value>425, 23</value>
   </data>
   <data name="pg_bd_info.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;pg_bd_info.Name" xml:space="preserve">
     <value>pg_bd_info</value>
@@ -349,7 +349,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pg_bd_info.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lb_db_info.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 262</value>
@@ -358,7 +358,7 @@
     <value>425, 37</value>
   </data>
   <data name="lb_db_info.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;lb_db_info.Name" xml:space="preserve">
     <value>lb_db_info</value>
@@ -370,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_db_info.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="bt_add_create.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -385,7 +385,7 @@
     <value>100, 25</value>
   </data>
   <data name="bt_add_create.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>6</value>
   </data>
   <data name="bt_add_create.Text" xml:space="preserve">
     <value>&amp;bt_add_create</value>
@@ -403,7 +403,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bt_add_create.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lb_add_create_db.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
@@ -418,7 +418,7 @@
     <value>299, 45</value>
   </data>
   <data name="lb_add_create_db.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>10</value>
   </data>
   <data name="lb_add_create_db.Text" xml:space="preserve">
     <value>lb_add_create_db</value>
@@ -436,7 +436,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_add_create_db.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pb_logo.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 12</value>
@@ -457,7 +457,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pb_logo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="bt_cancel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -472,7 +472,7 @@
     <value>100, 25</value>
   </data>
   <data name="bt_cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>7</value>
   </data>
   <data name="bt_cancel.Text" xml:space="preserve">
     <value>&amp;bt_cancel</value>
@@ -490,7 +490,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bt_cancel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="ofd_open_db.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -498,6 +498,42 @@
   <metadata name="sfd_save_db.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>147, 17</value>
   </metadata>
+  <data name="bt_test_db.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="bt_test_db.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_test_db.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 205</value>
+  </data>
+  <data name="bt_test_db.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="bt_test_db.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="bt_test_db.Text" xml:space="preserve">
+    <value>&amp;bt_test_db</value>
+  </data>
+  <data name="bt_test_db.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="bt_test_db.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;bt_test_db.Name" xml:space="preserve">
+    <value>bt_test_db</value>
+  </data>
+  <data name="&gt;&gt;bt_test_db.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_test_db.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bt_test_db.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

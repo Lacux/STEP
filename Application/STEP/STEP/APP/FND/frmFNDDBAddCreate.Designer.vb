@@ -53,6 +53,7 @@ Partial Class fnd_DBAddCreate
 		Me.bt_cancel = New System.Windows.Forms.Button()
 		Me.ofd_open_db = New System.Windows.Forms.OpenFileDialog()
 		Me.sfd_save_db = New System.Windows.Forms.SaveFileDialog()
+		Me.bt_test_db = New System.Windows.Forms.Button()
 		CType(Me.pb_logo,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
@@ -144,10 +145,18 @@ Partial Class fnd_DBAddCreate
 		Me.bt_cancel.UseVisualStyleBackColor = true
 		AddHandler Me.bt_cancel.Click, AddressOf Me.Bt_cancelClick
 		'
+		'bt_test_db
+		'
+		resources.ApplyResources(Me.bt_test_db, "bt_test_db")
+		Me.bt_test_db.Name = "bt_test_db"
+		Me.bt_test_db.UseVisualStyleBackColor = true
+		AddHandler Me.bt_test_db.Click, AddressOf Me.Bt_test_dbClick
+		'
 		'fnd_DBAddCreate
 		'
 		resources.ApplyResources(Me, "$this")
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+		Me.Controls.Add(Me.bt_test_db)
 		Me.Controls.Add(Me.bt_cancel)
 		Me.Controls.Add(Me.pb_logo)
 		Me.Controls.Add(Me.lb_add_create_db)
@@ -172,6 +181,7 @@ Partial Class fnd_DBAddCreate
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private bt_test_db As System.Windows.Forms.Button
 	Private sfd_save_db As System.Windows.Forms.SaveFileDialog
 	Private ofd_open_db As System.Windows.Forms.OpenFileDialog
 	Private bt_cancel As System.Windows.Forms.Button

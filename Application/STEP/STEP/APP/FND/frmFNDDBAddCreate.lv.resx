@@ -144,4 +144,7 @@
   <data name="sfd_save_db.Title" xml:space="preserve">
     <value>Saglabāt datu bāzi ...</value>
   </data>
+  <data name="bt_test_db.Text" xml:space="preserve">
+    <value>&amp;Tests</value>
+  </data>
 </root>

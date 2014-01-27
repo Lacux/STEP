@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FirebirdSql.Data.FirebirdClient">
-      <HintPath>..\..\..\..\Downloads\NETProvider-4.1.0.0-NET40\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <HintPath>..\..\NetProvider\NETProvider-4.1.0.0-NET40\FirebirdSql.Data.FirebirdClient.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -126,6 +126,9 @@
     <None Include="APP\FND\Images\OpenFile_24.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="APP\FND\Images\Test_db_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="FbDataBase\FbEmbed\aliases.conf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -163,17 +166,11 @@
     <Folder Include="FbDataBase\FbEmbed" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="APP\FND\frmFNDConnections.en.resx">
-      <DependentUpon>frmFNDConnections.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="APP\FND\frmFNDConnections.lv.resx">
       <DependentUpon>frmFNDConnections.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="APP\FND\frmFNDConnections.resx">
       <DependentUpon>frmFNDConnections.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="APP\FND\frmFNDLoadApp.en.resx">
-      <DependentUpon>frmFNDLoadApp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="APP\FND\frmFNDLoadApp.lv.resx">
       <DependentUpon>frmFNDLoadApp.vb</DependentUpon>
@@ -181,16 +178,12 @@
     <EmbeddedResource Include="APP\FND\frmFNDLoadApp.resx">
       <DependentUpon>frmFNDLoadApp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="APP\FND\frmFNDMainForm.en.resx">
-      <DependentUpon>frmFNDMainForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="APP\FND\frmFNDMainForm.lv.resx">
       <DependentUpon>frmFNDMainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="APP\FND\frmFNDMainForm.resx">
       <DependentUpon>frmFNDMainForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="APP\FND\resFNDMessages.en.resx" />
     <EmbeddedResource Include="APP\FND\resFNDMessages.lv.resx" />
     <EmbeddedResource Include="APP\FND\resFNDMessages.resx" />
   </ItemGroup>

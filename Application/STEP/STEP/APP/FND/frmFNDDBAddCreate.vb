@@ -11,6 +11,8 @@
 Imports System.IO
 Imports System.Resources
 Imports System.String
+Imports FirebirdSql.Data.FirebirdClient
+
 Public Partial Class fnd_DBAddCreate
 	Dim MsgTransl As New ResourceManager("STEP.resFNDMessages", GetType(fnd_Connections).Assembly)
 	Dim db_acction As Integer
@@ -70,10 +72,17 @@ Public Partial Class fnd_DBAddCreate
 			Me.tb_db_host.Enabled = False
 			Me.tb_db_host.Text = "localhost"
 			Me.tb_db_address.Enabled = False
+			Me.bt_test_db.Visible = False
 		ElseIf Me.cb_db_type.SelectedIndex = 1 Then
 			Me.tb_db_host.Enabled = True
 			Me.tb_db_host.Text = ""
 			Me.tb_db_address.Enabled = True
+			If db_acction = 0 Then
+				Me.bt_test_db.Visible = True
+				Me.bt_test_db.Image = Image.FromFile(Directory.GetCurrentDirectory.ToString & "\APP\FND\Images\Test_db_24.png")
+			Else 
+				Me.bt_test_db.Visible = False
+			End If
 		End If		
 	End Sub
 	
@@ -192,5 +201,20 @@ Public Partial Class fnd_DBAddCreate
 	
 	Sub Bt_cancelClick(sender As Object, e As EventArgs)
 		Me.Close		
+	End Sub
+	
+	Sub Bt_test_dbClick(sender As Object, e As EventArgs)
+		Validation()
+		If field_validation = 1 Then
+			Try				
+				Using conn As New FbConnection(clsFNDDatabase.GetConnString.ToString)
+					conn.Open
+					conn.Close
+					Me.lb_db_info.Text = MsgTransl.GetString("strAddCreateTestOK")
+				End Using
+			Catch ex As FbException
+				Me.lb_db_info.Text = MsgTransl.GetString("strAddCreateTestFailed")
+			End Try	
+		End if
 	End Sub
 End Class
