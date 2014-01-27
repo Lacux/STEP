@@ -1,0 +1,16 @@
+﻿[-start-]
+CREATE TABLE fnd_users
+  (
+    user_id       INTEGER NOT NULL PRIMARY KEY,
+    user_name     VARCHAR(10) UNIQUE NOT NULL,
+    user_password VARCHAR(150),
+    user_status   VARCHAR(1),
+    creation_date TIMESTAMP NOT NULL
+  );
+[-end-]
+[-start-]
+CREATE GENERATOR GEN_USER_ID;
+[-end-]
+[-start-]
+SET GENERATOR GEN_USER_ID TO 0;
+[-end-]

@@ -1,0 +1,21 @@
+﻿[-start-]
+INSERT
+INTO fnd_users
+  (
+    user_id,
+    user_name,
+    user_password,
+    user_status,
+    creation_date
+  )
+  VALUES
+  (
+    (SELECT gen_id( gen_user_id, 1 ) FROM rdb$database
+    )
+    ,
+    'ADMIN',
+    'fe01ce2a7fbac8fafaed7c982a04e229',
+    'Y',
+    CURRENT_TIMESTAMP
+  );
+[-end-]

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{28B708F9-AF9F-456F-B8AF-A67B986EBBD3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <MyType>WindowsForms</MyType>
+    <RootNamespace>STEP</RootNamespace>
+    <AssemblyName>STEP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG=1,TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient">
+      <HintPath>..\..\..\..\Downloads\NETProvider-4.1.0.0-NET40\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\FND\clsFNDDatabase.vb" />
+    <Compile Include="APP\FND\clsFNDMD5.vb" />
+    <Compile Include="APP\FND\frmFNDDBAddCreate.Designer.vb">
+      <DependentUpon>frmFNDDBAddCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APP\FND\frmFNDDBAddCreate.vb" />
+    <Compile Include="APP\FND\frmFNDConnections.Designer.vb">
+      <DependentUpon>frmFNDConnections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APP\FND\frmFNDConnections.vb" />
+    <Compile Include="APP\FND\frmFNDLoadApp.Designer.vb">
+      <DependentUpon>frmFNDLoadApp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APP\FND\frmFNDLoadApp.vb" />
+    <Compile Include="APP\FND\frmFNDMainForm.Designer.vb">
+      <DependentUpon>frmFNDMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APP\FND\frmFNDMainForm.vb" />
+    <Compile Include="APP\FND\modFNDAppData.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP\FND\DB\NewDBTablesGen.txt" />
+    <EmbeddedResource Include="APP\FND\DB\NewDBData.txt" />
+    <EmbeddedResource Include="APP\FND\DB\NewDBProcedures.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\DB\NewDBTriggers.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDDBAddCreate.lv.resx">
+      <DependentUpon>frmFNDDBAddCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDDBAddCreate.resx">
+      <DependentUpon>frmFNDDBAddCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="APP\FND\Images\Add_db_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\Add_db_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\Cancel_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\Connections_db_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\Connect_db_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\Done_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\Drop_db_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\New_db_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\New_db_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\OpenFile_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\aliases.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\fbembed.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\firebird.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\firebird.msg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\ib_util.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\icudt30.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\icuin30.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FbDataBase\FbEmbed\icuuc30.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="APP" />
+    <Folder Include="APP\FND" />
+    <Folder Include="APP\FND\Images" />
+    <Folder Include="APP\FND\DB" />
+    <Folder Include="FbDataBase" />
+    <Folder Include="FbDataBase\FbEmbed" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP\FND\frmFNDConnections.en.resx">
+      <DependentUpon>frmFNDConnections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDConnections.lv.resx">
+      <DependentUpon>frmFNDConnections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDConnections.resx">
+      <DependentUpon>frmFNDConnections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDLoadApp.en.resx">
+      <DependentUpon>frmFNDLoadApp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDLoadApp.lv.resx">
+      <DependentUpon>frmFNDLoadApp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDLoadApp.resx">
+      <DependentUpon>frmFNDLoadApp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDMainForm.en.resx">
+      <DependentUpon>frmFNDMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDMainForm.lv.resx">
+      <DependentUpon>frmFNDMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDMainForm.resx">
+      <DependentUpon>frmFNDMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\resFNDMessages.en.resx" />
+    <EmbeddedResource Include="APP\FND\resFNDMessages.lv.resx" />
+    <EmbeddedResource Include="APP\FND\resFNDMessages.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

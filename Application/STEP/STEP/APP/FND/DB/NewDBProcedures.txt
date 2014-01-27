@@ -1,0 +1,163 @@
+﻿[-start-]
+CREATE OR ALTER PROCEDURE PRO_FND_USERS (
+    P_USER_ACTION Integer,
+    P_USER_NAME Varchar(10),
+    P_USER_PASSWORD Varchar(150),
+    P_USER_STATUS Varchar(1) )
+RETURNS (
+    R_ERROR_ID Varchar(15),
+    R_USER_NAME Varchar(10),
+    R_USER_STATUS Varchar(2) )
+AS
+declare v_user_validation varchar(2);
+declare v_user_id integer;
+declare v_user_name varchar(10);
+declare v_user_status varchar(1);
+begin
+
+/*-------------------------------------------------------------
+*            pro_fnd_users - manage application users
+*            created by:    Elviss Petersons
+*            creation date: 14.01.2014
+*            version:       1.0
+*--------------------------------------------------------------
+*   Input parameters:
+*       p_user_action   - 1: Insert new user
+*                       - 2: Update existing user
+*                       - 3: Validate user data (login)
+*                       - not null or empty
+*       p_user_name     - provide user name - not null/empty
+*       p_user_password - provide user password
+*       p_user_status   - provide user status 
+* Note: if p_user_status is null or empty - overridden with 'Y'
+*--------------------------------------------------------------
+*   Output parameters:
+*       r_error_id      - profnduserr0: no errors - OK
+*                       - profnduserr1: no action provided
+*                       - profnduserr2: no user name provided
+*                       - profnduserr3: user exists
+*                       - profnduserr4: user is not active
+*                       - profnduserr5: inccoret user password
+*       r_user_name     - returned user name
+*       r_user_status   - returned user status
+*
+*
+-------------------------------------------------------------*/
+
+
+-- Set error to 0
+r_error_id = 'profnduserr0';
+
+-- Check action parameter
+If (:p_user_action is null) then 
+begin
+r_error_id = 'profnduserr1';
+suspend;
+end
+
+-- Check user name
+If (:p_user_name is null or :p_user_name = '') then 
+begin
+r_error_id = 'profnduserr2';
+suspend;
+end
+
+-- Check/Override user status flag
+If (:p_user_status is null or :p_user_status = '') then p_user_status = 'Y';
+ 
+If (r_error_id = 'profnduserr0') then
+begin
+    -- Insert new user [1]
+    If (:p_user_action = 1) then
+        begin
+        
+        v_user_validation = 'Y';
+        for
+        select user_id, user_name, user_status
+        from   FND_USERS
+        where  user_name = :p_user_name
+        into   v_user_id, v_user_name, v_user_status
+        do
+        begin
+            r_error_id = 'profnduserr3';
+            r_user_name = v_user_name;
+            r_user_status = v_user_status;
+            v_user_validation = 'N';
+        suspend;
+        end
+    
+        If (v_user_validation = 'Y') then
+            begin
+                INSERT INTO FND_USERS
+                ( USER_ID,
+                  USER_NAME,
+                  USER_PASSWORD,
+                  USER_STATUS,
+                  CREATION_DATE)
+                values
+                ( (SELECT GEN_ID( GEN_USER_ID, 1 ) FROM RDB$DATABASE),
+                  :p_user_name,
+                  :p_user_password,
+                  :p_user_status,
+                  current_timestamp);
+                  r_error_id = 'profnduserr0';
+                  r_user_name = p_user_name;
+                  r_user_status = p_user_status;
+                  suspend;
+            end
+        end
+    -- Update existing user [2]
+    else if (:p_user_action = 2) then
+        begin
+        UPDATE FND_USERS 
+        SET    USER_NAME     = :p_user_name,
+               USER_PASSWORD = :p_user_password,
+               USER_STATUS   = :p_user_status
+        where  USER_NAME = :p_user_name;
+        r_error_id = 'profnduserr0';
+        r_user_name = p_user_name;
+        r_user_status = p_user_status;
+        suspend;
+        end
+    
+    -- Validate existing user [3]
+    else if (:p_user_action = 3) then
+        begin
+        v_user_validation = 'N';
+        for
+        select user_id, user_name, user_status
+        from   FND_USERS
+        where  user_name     = :p_user_name
+        and    user_password = :p_user_password
+        into   v_user_id, v_user_name, v_user_status
+        do
+        begin
+            if (v_user_status = 'N') then 
+            begin
+                r_error_id = 'profnduserr4';
+                r_user_name = v_user_name;
+                r_user_status = v_user_status;
+                v_user_validation = 'N1';
+                suspend;
+            end
+            else
+            begin
+            r_error_id = 'profnduserr0';
+            r_user_name = v_user_name;
+            r_user_status = v_user_status;
+            v_user_validation = 'Y';
+            suspend;
+            end
+        end
+
+        If (v_user_validation = 'N') then
+        begin
+            r_error_id = 'profnduserr5';
+            r_user_name = p_user_name;
+            r_user_status = p_user_status;
+            suspend;
+        end
+        end
+end
+end;
+[-end-]
