@@ -193,7 +193,7 @@
     <value>Lietotājs nav aktīvs.</value>
   </data>
   <data name="profnduserr5" xml:space="preserve">
-    <value>Parole ir ievadīta nepareizi.</value>
+    <value>Lietotājvārds vai parole ir ievadīta nepareizi.</value>
   </data>
   <data name="strCreatDBTrigg" xml:space="preserve">
     <value>Veido triggerus ...</value>

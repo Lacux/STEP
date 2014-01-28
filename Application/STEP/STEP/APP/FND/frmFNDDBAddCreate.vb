@@ -190,7 +190,7 @@ Public Partial Class fnd_DBAddCreate
 			MessageBox.Show(MsgTransl.GetString("strAddCreateMissHost"), MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
 		ElseIf (db_acction = 1) And (File.Exists(Me.tb_db_address.Text)) Then
 			Me.field_validation = 0
-			MessageBox.Show(MsgTransl.GetString("strAddCreateExistFile"), MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+			MessageBox.Show(MsgTransl.GetString("strAddCreateExistFile"), MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1)
 		Else
 			Me.field_validation = 1
 			G_DB_LOCATION = Me.tb_db_address.Text

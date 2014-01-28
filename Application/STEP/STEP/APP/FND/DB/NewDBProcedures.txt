@@ -74,8 +74,8 @@ begin
         v_user_validation = 'Y';
         for
         select user_id, user_name, user_status
-        from   FND_USERS
-        where  user_name = :p_user_name
+        from   FND_USERS_ALL
+        where  lower(user_name) = lower(:p_user_name)
         into   v_user_id, v_user_name, v_user_status
         do
         begin
@@ -88,14 +88,14 @@ begin
     
         If (v_user_validation = 'Y') then
             begin
-                INSERT INTO FND_USERS
+                INSERT INTO FND_USERS_ALL
                 ( USER_ID,
                   USER_NAME,
                   USER_PASSWORD,
                   USER_STATUS,
                   CREATION_DATE)
                 values
-                ( (SELECT GEN_ID( GEN_USER_ID, 1 ) FROM RDB$DATABASE),
+                ( (SELECT GEN_ID( FND_GEN_USER_ID, 1 ) FROM RDB$DATABASE),
                   :p_user_name,
                   :p_user_password,
                   :p_user_status,
@@ -109,11 +109,11 @@ begin
     -- Update existing user [2]
     else if (:p_user_action = 2) then
         begin
-        UPDATE FND_USERS 
+        UPDATE FND_USERS_ALL
         SET    USER_NAME     = :p_user_name,
                USER_PASSWORD = :p_user_password,
                USER_STATUS   = :p_user_status
-        where  USER_NAME = :p_user_name;
+        where  lower(USER_NAME) = lower(:p_user_name);
         r_error_id = 'profnduserr0';
         r_user_name = p_user_name;
         r_user_status = p_user_status;
@@ -126,8 +126,8 @@ begin
         v_user_validation = 'N';
         for
         select user_id, user_name, user_status
-        from   FND_USERS
-        where  user_name     = :p_user_name
+        from   FND_USERS_ALL
+        where  lower(user_name)     = lower(:p_user_name)
         and    user_password = :p_user_password
         into   v_user_id, v_user_name, v_user_status
         do

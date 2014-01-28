@@ -1,5 +1,12 @@
 ﻿[-start-]
-CREATE TABLE fnd_users
+CREATE DOMAIN "BOOLEAN"
+ AS Smallint
+ NOT NULL
+ CHECK (value is null or value in (0, 1))
+;
+[-end-]
+[-start-]
+CREATE TABLE fnd_users_all
   (
     user_id       INTEGER NOT NULL PRIMARY KEY,
     user_name     VARCHAR(10) UNIQUE NOT NULL,
@@ -9,8 +16,87 @@ CREATE TABLE fnd_users
   );
 [-end-]
 [-start-]
-CREATE GENERATOR GEN_USER_ID;
+CREATE GENERATOR FND_GEN_USER_ID;
 [-end-]
 [-start-]
-SET GENERATOR GEN_USER_ID TO 0;
+SET GENERATOR FND_GEN_USER_ID TO 0;
+[-end-]
+[-start-]
+CREATE TABLE PZ_PARTIES_ALL
+(
+  PARTY_ID Integer NOT NULL PRIMARY KEY,
+  PARTY_NUMBER Varchar(10) NOT NULL,
+  PARTY_TYPE_ID Integer NOT NULL,
+  PARTY_NAME Varchar(150) NOT NULL,
+  TAX_REFERENCE Varchar(50),
+  REG_REFERENCE Varchar(50),
+  PERSON_FIRST_NAME Varchar(50),
+  PERSON_LAST_NAME Varchar(100),
+  PARTY_GROUP_NAME Varchar(100),
+  COMMENTS Varchar(50),
+  STATUS_FLAG BOOLEAN DEFAULT 1 NOT NULL,
+  CON_PARTY_TITLE Varchar(100),
+  PHONE_NUMBER Varchar(50),
+  FAX_NUMBER Varchar(50),
+  MOBILE_NUMBER Varchar(50),
+  EMAIL Varchar(150),
+  WWW Varchar(150),
+  SKYPE Varchar(50),
+  PARTY_ORG_ID Integer,
+  GENERAL_FLAG BOOLEAN,
+  PARTY_RELATED_ID Integer
+);
+[-end-]
+[-start-]
+CREATE GENERATOR PZ_GEN_PARTY_ID;
+[-end-]
+[-start-]
+SET GENERATOR PZ_GEN_PARTY_ID TO 0;
+[-end-]
+[-start-]
+CREATE GENERATOR PZ_GEN_PARTY_NUMBER_ORG;
+[-end-]
+[-start-]
+SET GENERATOR PZ_GEN_PARTY_NUMBER_ORG TO 0;
+[-end-]
+[-start-]
+CREATE GENERATOR PZ_GEN_PARTY_NUMBER_PAJ;
+[-end-]
+[-start-]
+SET GENERATOR PZ_GEN_PARTY_NUMBER_PAJ TO 0;
+[-end-]
+[-start-]
+CREATE GENERATOR PZ_GEN_PARTY_NUMBER_PAF;
+[-end-]
+[-start-]
+SET GENERATOR PZ_GEN_PARTY_NUMBER_PAF TO 0;
+[-end-]
+[-start-]
+CREATE GENERATOR PZ_GEN_PARTY_NUMBER_CON;
+[-end-]
+[-start-]
+SET GENERATOR PZ_GEN_PARTY_NUMBER_CON TO 0;
+[-end-]
+[-start-]
+CREATE GENERATOR PZ_GEN_PARTY_NUMBER_EMP;
+[-end-]
+[-start-]
+SET GENERATOR PZ_GEN_PARTY_NUMBER_EMP TO 0;
+[-end-]
+[-start-]
+CREATE TABLE PZ_TYPES_ALL
+(
+  TYPE_ID Integer Not null PRIMARY KEY,
+  TYPE_SHT Varchar(10) Not null,
+  TYPE_NAME Varchar(100),
+  TYPE_OBJECT Varchar(50),
+  TYPE_OBJ_DATA Varchar(50) NOT NULL,
+  TYPE_SOURCE Varchar(1)
+);
+[-end-]
+[-start-]
+CREATE GENERATOR PZ_GEN_TYPE_ID;
+[-end-]
+[-start-]
+SET GENERATOR PZ_GEN_TYPE_ID TO 0;
 [-end-]

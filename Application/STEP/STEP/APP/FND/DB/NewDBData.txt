@@ -1,6 +1,6 @@
 ﻿[-start-]
 INSERT
-INTO fnd_users
+INTO fnd_users_all
   (
     user_id,
     user_name,
@@ -10,7 +10,7 @@ INTO fnd_users
   )
   VALUES
   (
-    (SELECT gen_id( gen_user_id, 1 ) FROM rdb$database
+    (SELECT gen_id( fnd_gen_user_id, 1 ) FROM rdb$database
     )
     ,
     'ADMIN',
@@ -18,4 +18,64 @@ INTO fnd_users
     'Y',
     CURRENT_TIMESTAMP
   );
+[-end-]
+[-start-]
+INSERT INTO PZ_TYPES_ALL 
+(TYPE_ID, TYPE_SHT, TYPE_NAME, TYPE_OBJECT, TYPE_OBJ_DATA, TYPE_SOURCE)
+ VALUES (
+(SELECT gen_id( PZ_GEN_TYPE_ID, 1 ) FROM rdb$database), 
+'ORG', 
+'Uzņēmums', 
+'PZ_PARTIES_ALL', 
+'PARTY_TYPE_ID', 
+'A'
+);
+[-end-]
+[-start-]
+INSERT INTO PZ_TYPES_ALL 
+(TYPE_ID, TYPE_SHT, TYPE_NAME, TYPE_OBJECT, TYPE_OBJ_DATA, TYPE_SOURCE)
+ VALUES (
+(SELECT gen_id( PZ_GEN_TYPE_ID, 1 ) FROM rdb$database), 
+'PAJ', 
+'Juridiska persona', 
+'PZ_PARTIES_ALL', 
+'PARTY_TYPE_ID', 
+'A'
+);
+[-end-]
+[-start-]
+INSERT INTO PZ_TYPES_ALL 
+(TYPE_ID, TYPE_SHT, TYPE_NAME, TYPE_OBJECT, TYPE_OBJ_DATA, TYPE_SOURCE)
+ VALUES (
+(SELECT gen_id( PZ_GEN_TYPE_ID, 1 ) FROM rdb$database), 
+'PAF', 
+'Fiziska persona', 
+'PZ_PARTIES_ALL', 
+'PARTY_TYPE_ID', 
+'A'
+);
+[-end-]
+[-start-]
+INSERT INTO PZ_TYPES_ALL 
+(TYPE_ID, TYPE_SHT, TYPE_NAME, TYPE_OBJECT, TYPE_OBJ_DATA, TYPE_SOURCE)
+ VALUES (
+(SELECT gen_id( PZ_GEN_TYPE_ID, 1 ) FROM rdb$database), 
+'CON', 
+'Kontaktpersona', 
+'PZ_PARTIES_ALL', 
+'PARTY_TYPE_ID', 
+'A'
+);
+[-end-]
+[-start-]
+INSERT INTO PZ_TYPES_ALL 
+(TYPE_ID, TYPE_SHT, TYPE_NAME, TYPE_OBJECT, TYPE_OBJ_DATA, TYPE_SOURCE)
+ VALUES (
+(SELECT gen_id( PZ_GEN_TYPE_ID, 1 ) FROM rdb$database), 
+'EMP', 
+'Darbinieks', 
+'PZ_PARTIES_ALL', 
+'PARTY_TYPE_ID', 
+'A'
+);
 [-end-]
