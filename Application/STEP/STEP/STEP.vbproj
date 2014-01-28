@@ -97,9 +97,6 @@
     <EmbeddedResource Include="APP\FND\frmFNDDBAddCreate.resx">
       <DependentUpon>frmFNDDBAddCreate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="APP\FND\frmFNDMainForm.en.resx">
-      <DependentUpon>frmFNDMainForm.vb</DependentUpon>
-    </EmbeddedResource>
     <None Include="APP\FND\Images\Add_db_32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
