@@ -118,10 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="stDataBaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="mi_stDataBase.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 24</value>
   </data>
   <data name="mi_stDataBase.Text" xml:space="preserve">
     <value>Datubāze</value>
+  </data>
+  <data name="mi_stWindows.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 24</value>
+  </data>
+  <data name="mi_stWindows.Text" xml:space="preserve">
+    <value>&amp;Logi</value>
   </data>
 </root>

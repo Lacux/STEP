@@ -47,6 +47,7 @@ Public Partial Class fnd_DBAddCreate
 			MessageBox.Show(MsgTransl.GetString("strMissingPics") + ex.Message, MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
 		End Try
 		
+		' Load Title/Filter for Open/Save dialog 
 		Dim LocRM As New ResourceManager(GetType(fnd_DBAddCreate))
 		Me.ofd_open_db.Title = LocRM.GetString("ofd_open_db.Title") 
 		Me.ofd_open_db.Filter = LocRM.GetString("ofd_open_db.Filter")
@@ -56,6 +57,7 @@ Public Partial Class fnd_DBAddCreate
 	End Sub
 	
 	Sub Bt_add_addressClick(sender As Object, e As EventArgs)
+		'Call Open/Save dialog
 		If db_acction = 0 Then
 			If ofd_open_db.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
 				Me.tb_db_address.Text = ofd_open_db.FileName
@@ -68,6 +70,7 @@ Public Partial Class fnd_DBAddCreate
 	End Sub
 	
 	Sub Cb_DB_typeSelectedIndexChanged(sender As Object, e As EventArgs)
+		' Based on choosen connection type load related data
 		If Me.cb_db_type.SelectedIndex = 0 Then
 			Me.tb_db_host.Enabled = False
 			Me.tb_db_host.Text = "localhost"
@@ -87,7 +90,9 @@ Public Partial Class fnd_DBAddCreate
 	End Sub
 	
 	Sub Bt_add_createClick(sender As Object, e As EventArgs)
+		' Call field validation
 		Validation()
+		' If validation was OK, then create/add DB
 		If field_validation = 1 Then
 			If db_acction = 0 Then
 				Dim dBaseConnection As New System.Data.OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; " & _
@@ -106,7 +111,6 @@ Public Partial Class fnd_DBAddCreate
 				Me.lb_db_info.Text = MsgTransl.GetString("strConnInfoDBAdd") & "(" & Me.tb_db_name.text & ")"
 				Me.pg_bd_info.Increment(100)			
 			Else 
-				
 				
 				Dim resultDB As String
 				Me.lb_db_info.Text = MsgTransl.GetString("strCreatListDB")
@@ -171,6 +175,7 @@ Public Partial Class fnd_DBAddCreate
 	End Sub
 	
 	Sub Validation
+		' Field Validation
 		If	Me.cb_db_type.SelectedIndex < 0 Then
 			Me.field_validation = 0
 			MessageBox.Show(MsgTransl.GetString("strAddCreateMissType"), MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
@@ -183,6 +188,9 @@ Public Partial Class fnd_DBAddCreate
 		ElseIf IsNullOrEmpty(Me.tb_db_host.Text) Then
 			Me.field_validation = 0
 			MessageBox.Show(MsgTransl.GetString("strAddCreateMissHost"), MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+		ElseIf (db_acction = 1) And (File.Exists(Me.tb_db_address.Text)) Then
+			Me.field_validation = 0
+			MessageBox.Show(MsgTransl.GetString("strAddCreateExistFile"), MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
 		Else
 			Me.field_validation = 1
 			G_DB_LOCATION = Me.tb_db_address.Text

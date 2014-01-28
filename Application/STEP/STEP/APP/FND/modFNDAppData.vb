@@ -16,8 +16,10 @@ Public Module fnd_AppData
 	Public G_DB_HOST As String
 	Public G_DB_NAME As String = "APPSTEP"
 	Public G_DB_PSW As String = "gF196dhV"
+	Public G_APP_DB_NAME As String
 	Public G_DB_SV_TYPE As String
 	Public G_DB_ClientLibrary As String = "\FbDataBase\FbEmbed\fbembed.dll"
 	Public G_US_NAME As String
+	Public G_FND_VALID As Integer = 0
 	
 End Module

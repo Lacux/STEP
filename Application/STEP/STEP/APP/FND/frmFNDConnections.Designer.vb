@@ -139,7 +139,7 @@ Partial Class fnd_Connections
 		'
 		Me.cb_APPLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
 		Me.cb_APPLanguage.FormattingEnabled = true
-		Me.cb_APPLanguage.Items.AddRange(New Object() {resources.GetString("cb_APPLanguage.Items"), resources.GetString("cb_APPLanguage.Items1")})
+		Me.cb_APPLanguage.Items.AddRange(New Object() {resources.GetString("cb_APPLanguage.Items")})
 		resources.ApplyResources(Me.cb_APPLanguage, "cb_APPLanguage")
 		Me.cb_APPLanguage.Name = "cb_APPLanguage"
 		AddHandler Me.cb_APPLanguage.SelectedIndexChanged, AddressOf Me.Cb_APPLanguageSelectedIndexChanged
@@ -194,6 +194,7 @@ Partial Class fnd_Connections
 		Me.Name = "fnd_Connections"
 		AddHandler Activated, AddressOf Me.Fnd_ConnectionsActivated
 		AddHandler FormClosed, AddressOf Me.Fnd_ConnectionsFormClosed
+		AddHandler Load, AddressOf Me.Fnd_ConnectionsLoad
 		Me.gb_Menu.ResumeLayout(false)
 		CType(Me.pb_logo,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)

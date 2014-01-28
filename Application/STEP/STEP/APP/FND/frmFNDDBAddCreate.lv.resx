@@ -133,13 +133,13 @@
     <value>&amp;Atcelt</value>
   </data>
   <data name="ofd_open_db.Filter" xml:space="preserve">
-    <value>STEP datu bāze (*.fbd;*.FBD)|*.fbd;*.FBD|Visi faili (*.*)|*.*</value>
+    <value>STEP datu bāze (*.fdb;*.FDB)|*.fdb;*.FDB|Visi faili (*.*)|*.*</value>
   </data>
   <data name="ofd_open_db.Title" xml:space="preserve">
     <value>Pievienot datu bāzi ...</value>
   </data>
   <data name="sfd_save_db.Filter" xml:space="preserve">
-    <value>STEP datu bāze (*.fbd)|*.fbd</value>
+    <value>STEP datu bāze (*.fdb)|*.fdb</value>
   </data>
   <data name="sfd_save_db.Title" xml:space="preserve">
     <value>Saglabāt datu bāzi ...</value>

@@ -8,17 +8,12 @@
 ' 
 ' 
 '
-Imports System.Threading
-Imports System.Globalization
 Imports System.Resources
 Imports System.IO
 
 Public Partial Class fnd_LoadApp
-	Public Sub New()
-				
-		' Set default application language: Latvian
-		Thread.CurrentThread.CurrentUICulture = New CultureInfo(G_APPS_LANG)
-		
+	Public Sub New()			
+	
 		' The Me.InitializeComponent call is required for Windows Forms designer support.
 		Me.InitializeComponent()
 		
@@ -67,7 +62,7 @@ Public Partial Class fnd_LoadApp
 		Catch ex As Exception
 			Me.tm_App_Load.Stop
 			MessageBox.Show(MsgTransl.GetString("strError") & Ex.Message)
-			Close()
+			'Me.Close()
 		End Try
 	End Sub
 	

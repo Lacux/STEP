@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="APP\FND\frmFNDMainForm.vb" />
     <Compile Include="APP\FND\modFNDAppData.vb" />
+    <Compile Include="APP\FND\modFNDOpenForms.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>
@@ -96,6 +97,9 @@
     <EmbeddedResource Include="APP\FND\frmFNDDBAddCreate.resx">
       <DependentUpon>frmFNDDBAddCreate.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\frmFNDMainForm.en.resx">
+      <DependentUpon>frmFNDMainForm.vb</DependentUpon>
+    </EmbeddedResource>
     <None Include="APP\FND\Images\Add_db_32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -103,6 +107,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="APP\FND\Images\Cancel_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\Connections_db_16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="APP\FND\Images\Connections_db_64.png">
@@ -127,6 +134,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="APP\FND\Images\Test_db_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\FND\Images\User_db_16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="FbDataBase\FbEmbed\aliases.conf">

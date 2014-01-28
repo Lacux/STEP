@@ -240,4 +240,16 @@
   <data name="strAddCreateTestFailed" xml:space="preserve">
     <value>Datu bāze nav pieejama ar dotajiem parametriem (Tests neizdevās).</value>
   </data>
+  <data name="strAddCreateExistFile" xml:space="preserve">
+    <value>Jūs esat izvēlējies eksistējošu failu norādītājā adresē vai fails ar šādu nosaukumu jau eksistē norādītajā adresē. Lūdzu nomainiet faila nosaukumu, lai varētu izveidot jaunu datubāzi.</value>
+  </data>
+  <data name="strMainFormUser" xml:space="preserve">
+    <value>Lietotājs: </value>
+  </data>
+  <data name="strMainFormDBName" xml:space="preserve">
+    <value>Datubāze: </value>
+  </data>
+  <data name="strMainFormDBLocation" xml:space="preserve">
+    <value>Adrese: </value>
+  </data>
 </root>

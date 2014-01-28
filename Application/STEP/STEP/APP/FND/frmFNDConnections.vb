@@ -17,7 +17,6 @@ Imports System.Globalization
 Imports System.IO.FileNotFoundException
 Imports FirebirdSql.Data.FirebirdClient
 Imports System.Security.Cryptography
-
 Public Partial Class fnd_Connections
 	Dim MsgTransl As New ResourceManager("STEP.resFNDMessages", GetType(fnd_Connections).Assembly)
 	
@@ -38,30 +37,31 @@ Public Partial Class fnd_Connections
 			MessageBox.Show(MsgTransl.GetString("strMissingPics") + ex.Message, MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
 		End Try
 		
-		' Set default application language in choose list: Latvian (0), English (1)
+		' Set default application language in choose list: Latvian (0)
 		Me.cb_APPLanguage.SelectedIndex = 0 
 		
 		' Set APP name and Version
 		Me.lb_APPVersion.Text = G_APPS_NAME & " " & G_APPS_VERS 
 		
-		
+		' Load db list 
 		GetDBlist()
 		
 	End Sub
 	
 	
 	Sub Cb_APPLanguageSelectedIndexChanged(sender As Object, e As EventArgs)
+		' Check choosen language
 		If Me.cb_APPLanguage.SelectedIndex = 0 Then
 			Thread.CurrentThread.CurrentUICulture = New CultureInfo("lv")
-		ElseIf Me.cb_APPLanguage.SelectedIndex = 1 Then
-			Thread.CurrentThread.CurrentUICulture = New CultureInfo("en")
 		End If
 		
+		' Change language of form
 		ChangeLanguage()
 		
 	End Sub
 	
 	Sub ChangeLanguage
+		' Change language of form 
 		Dim LocRM As New ResourceManager(GetType(fnd_Connections))
 		Me.bt_Connet.Text = LocRM.GetString("bt_Connet.Text") 
 		Me.bt_DropDB.Text = LocRM.GetString("bt_DropDB.Text")
@@ -75,8 +75,10 @@ Public Partial Class fnd_Connections
 	End Sub
 	
 	Sub GetDBlist
+		' Clean listview
 		Me.lw_dblist.Items.Clear
 		
+		' Connect to local db and load data
 		Dim dBaseConnection As New System.Data.OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; " & _
 			"Data Source=" & Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) & "\" & G_APPS_NAME & ";" & _
 			"Extended Properties=dBase IV")
@@ -118,6 +120,7 @@ Public Partial Class fnd_Connections
 	End Sub
 	
 	Sub Bt_DropDBClick(sender As Object, e As EventArgs)
+		' Removing selected database from list
 		If Me.lw_dblist.SelectedItems.Count = 0 Then
 			MessageBox.Show(MsgTransl.GetString("strConnDropNoDB"), MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)	
 		Else
@@ -144,7 +147,7 @@ Public Partial Class fnd_Connections
 					dBaseCommand.ExecuteNonQuery()
 					
 					dBaseConnection.Close()
-					
+					'Reload db list
 					GetDBlist()
 				End if	
 			End if
@@ -162,7 +165,7 @@ Public Partial Class fnd_Connections
 	End Sub
 	
 	Sub Bt_ConnetClick(sender As Object, e As EventArgs)
-		
+		'Call procedure pro_fnd_users to validate user data/login
 		Using FBDS As New DataSet
 			Using conn As New FbConnection(clsFNDDatabase.GetConnString.ToString)
 				conn.Open			
@@ -178,13 +181,15 @@ Public Partial Class fnd_Connections
 					Using FbAdapterUSER As New FbDataAdapter(command)
 						FbAdapterUSER.Fill( FBDS, "LogInResult")
 						If CType(FBDS.Tables("LogInResult").Rows(0).Item(0), String) = "profnduserr0" Then
-							G_US_NAME = CType(FBDS.Tables("LogInResult").Rows(0).Item(1), String)
-							MessageBox.Show(G_US_NAME)
-							'Ielasam arī parējos datubāzes datus... 
+							G_US_NAME = CType(FBDS.Tables("LogInResult").Rows(0).Item(1), String)	
+							G_FND_VALID = 1
+							'	Me.ParentForm.Controls.
+							Me.Close
 						Else
 							MessageBox.Show(MsgTransl.GetString(CType(FBDS.Tables("LogInResult").Rows(0).Item(0), String)), _
 								MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, _
 								MessageBoxDefaultButton.Button1)
+							G_FND_VALID = 0
 						End If
 					End Using
 				End Using
@@ -194,16 +199,17 @@ Public Partial Class fnd_Connections
 	End Sub
 	
 	Sub Fnd_ConnectionsActivated(sender As Object, e As EventArgs)
+		' When form has focuss - re-load db list and disable Connect button
 		GetDBlist()
 		Me.bt_Connet.Enabled = False
 	End Sub
 	
 	
 	Sub Lw_dblistSelectedIndexChanged(sender As Object, e As EventArgs)
-		Dim p_db_name As String = ""
+		'Check {1} local database exist or {2} can connect to server database and enable/disable Connect button
 		If Me.lw_dblist.SelectedItems.Count > 0 Then
 			For Each item As ListViewItem In lw_dblist.SelectedItems
-				p_db_name = item.SubItems(1).Text
+				G_APP_DB_NAME = item.SubItems(1).Text
 				G_DB_LOCATION = item.SubItems(2).Text
 				G_DB_SV_TYPE = item.SubItems(4).Text
 				G_DB_HOST = item.SubItems(3).Text
@@ -214,7 +220,7 @@ Public Partial Class fnd_Connections
 					Me.bt_Connet.Enabled = True
 				Else
 					Me.bt_Connet.Enabled = False
-					MessageBox.Show(MsgTransl.GetString("strConnConnNoDB") & p_db_name & ": " & G_DB_LOCATION, MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+					MessageBox.Show(MsgTransl.GetString("strConnConnNoDB") & G_APP_DB_NAME & ": " & G_DB_LOCATION, MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
 				End If
 			Else
 				Try				
@@ -225,13 +231,18 @@ Public Partial Class fnd_Connections
 					End Using
 				Catch ex As FbException
 					Me.bt_Connet.Enabled = False
-					MessageBox.Show(MsgTransl.GetString("strConnConnFailed1") & p_db_name & MsgTransl.GetString("strConnConnFailed2") & ex.Message , MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+					MessageBox.Show(MsgTransl.GetString("strConnConnFailed1") & G_APP_DB_NAME & MsgTransl.GetString("strConnConnFailed2") & ex.Message , MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
 				End Try
 			End If
 		End If
 	End Sub
 	
 	Sub Fnd_ConnectionsFormClosed(sender As Object, e As FormClosedEventArgs)
+		modFNDOpenForms.fndOpenForms.Remove(Me.Name)
 		Me.Dispose
+	End Sub
+	
+	Sub Fnd_ConnectionsLoad(sender As Object, e As EventArgs)
+		modFNDOpenForms.fndOpenForms.Add(Me.Name, Me)
 	End Sub
 End Class
