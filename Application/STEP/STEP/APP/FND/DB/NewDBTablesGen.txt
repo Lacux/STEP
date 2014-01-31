@@ -1,7 +1,6 @@
 ﻿[-start-]
 CREATE DOMAIN "BOOLEAN"
  AS Smallint
- NOT NULL
  CHECK (value is null or value in (0, 1))
 ;
 [-end-]
@@ -26,7 +25,8 @@ CREATE TABLE PZ_PARTIES_ALL
 (
   PARTY_ID Integer NOT NULL PRIMARY KEY,
   PARTY_NUMBER Varchar(10) NOT NULL,
-  PARTY_TYPE_ID Integer NOT NULL,
+  PARTY_TYPE Varchar(3) NOT NULL,
+  PARTY_ORG_ID Integer NOT NULL,
   PARTY_NAME Varchar(150) NOT NULL,
   TAX_REFERENCE Varchar(50),
   REG_REFERENCE Varchar(50),
@@ -42,7 +42,6 @@ CREATE TABLE PZ_PARTIES_ALL
   EMAIL Varchar(150),
   WWW Varchar(150),
   SKYPE Varchar(50),
-  PARTY_ORG_ID Integer,
   GENERAL_FLAG BOOLEAN,
   PARTY_RELATED_ID Integer
 );
@@ -91,7 +90,8 @@ CREATE TABLE PZ_TYPES_ALL
   TYPE_NAME Varchar(100),
   TYPE_OBJECT Varchar(50),
   TYPE_OBJ_DATA Varchar(50) NOT NULL,
-  TYPE_SOURCE Varchar(1)
+  TYPE_SOURCE Varchar(1) NOT NULL,
+  TYPE_STATUS BOOLEAN NOT NULL
 );
 [-end-]
 [-start-]

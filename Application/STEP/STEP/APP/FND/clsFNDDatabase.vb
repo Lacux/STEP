@@ -89,7 +89,6 @@ Public Class clsFNDDatabase
 				 End Using
 	   	   CreateTables = "Y"
 		Catch ex As FbException
-			MessageBox.Show(ex.Message)
 			CreateTables = ex.Message
 		End Try
 			
@@ -133,7 +132,6 @@ Public Class clsFNDDatabase
 				 End Using
 	   	   InsertData = "Y"
 		Catch ex As FbException
-			MessageBox.Show(ex.Message)
 			InsertData = ex.Message
 		End Try
 	End Function
@@ -176,7 +174,6 @@ Public Class clsFNDDatabase
 				 End Using
 	   	   CreateProcedures = "Y"
 		Catch ex As FbException
-			MessageBox.Show(ex.Message)
 			CreateProcedures = ex.Message
 		End Try
 	End Function
@@ -219,7 +216,6 @@ Public Class clsFNDDatabase
 				 End Using
 	   	   CreateTriggers = "Y"
 		Catch ex As FbException
-			MessageBox.Show(ex.Message)
 			CreateTriggers = ex.Message
 		End Try
 	End Function

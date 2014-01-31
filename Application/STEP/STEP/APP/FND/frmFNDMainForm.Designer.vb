@@ -46,33 +46,34 @@ Partial Class fnd_MainForm
 		Me.tssl_app_db_txt = New System.Windows.Forms.ToolStripStatusLabel()
 		Me.tssl_app_db_Loc = New System.Windows.Forms.ToolStripStatusLabel()
 		Me.tssl_app_db_Loc_txt = New System.Windows.Forms.ToolStripStatusLabel()
+		Me.mi_stPartners = New System.Windows.Forms.ToolStripMenuItem()
 		Me.menu_MainMenu.SuspendLayout
 		Me.statusStrip1.SuspendLayout
 		Me.SuspendLayout
 		'
 		'menu_MainMenu
 		'
+		Me.menu_MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mi_stDataBase, Me.mi_stPartners, Me.mi_stWindows})
 		resources.ApplyResources(Me.menu_MainMenu, "menu_MainMenu")
-		Me.menu_MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mi_stDataBase, Me.mi_stWindows})
 		Me.menu_MainMenu.MdiWindowListItem = Me.mi_stWindows
 		Me.menu_MainMenu.Name = "menu_MainMenu"
 		Me.menu_MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
 		'
 		'mi_stDataBase
 		'
-		resources.ApplyResources(Me.mi_stDataBase, "mi_stDataBase")
 		Me.mi_stDataBase.Name = "mi_stDataBase"
+		resources.ApplyResources(Me.mi_stDataBase, "mi_stDataBase")
 		AddHandler Me.mi_stDataBase.Click, AddressOf Me.Mi_stDataBaseClick
 		'
 		'mi_stWindows
 		'
-		resources.ApplyResources(Me.mi_stWindows, "mi_stWindows")
 		Me.mi_stWindows.Name = "mi_stWindows"
+		resources.ApplyResources(Me.mi_stWindows, "mi_stWindows")
 		'
 		'statusStrip1
 		'
-		resources.ApplyResources(Me.statusStrip1, "statusStrip1")
 		Me.statusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tssl_app_user, Me.tssl_app_user_txt, Me.tssl_app_db, Me.tssl_app_db_txt, Me.tssl_app_db_Loc, Me.tssl_app_db_Loc_txt})
+		resources.ApplyResources(Me.statusStrip1, "statusStrip1")
 		Me.statusStrip1.Name = "statusStrip1"
 		Me.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
 		'
@@ -83,9 +84,9 @@ Partial Class fnd_MainForm
 		'
 		'tssl_app_user_txt
 		'
-		resources.ApplyResources(Me.tssl_app_user_txt, "tssl_app_user_txt")
 		Me.tssl_app_user_txt.ForeColor = System.Drawing.Color.Crimson
 		Me.tssl_app_user_txt.Name = "tssl_app_user_txt"
+		resources.ApplyResources(Me.tssl_app_user_txt, "tssl_app_user_txt")
 		'
 		'tssl_app_db
 		'
@@ -94,9 +95,9 @@ Partial Class fnd_MainForm
 		'
 		'tssl_app_db_txt
 		'
-		resources.ApplyResources(Me.tssl_app_db_txt, "tssl_app_db_txt")
 		Me.tssl_app_db_txt.ForeColor = System.Drawing.Color.Crimson
 		Me.tssl_app_db_txt.Name = "tssl_app_db_txt"
+		resources.ApplyResources(Me.tssl_app_db_txt, "tssl_app_db_txt")
 		'
 		'tssl_app_db_Loc
 		'
@@ -105,9 +106,15 @@ Partial Class fnd_MainForm
 		'
 		'tssl_app_db_Loc_txt
 		'
-		resources.ApplyResources(Me.tssl_app_db_Loc_txt, "tssl_app_db_Loc_txt")
 		Me.tssl_app_db_Loc_txt.ForeColor = System.Drawing.Color.Crimson
 		Me.tssl_app_db_Loc_txt.Name = "tssl_app_db_Loc_txt"
+		resources.ApplyResources(Me.tssl_app_db_Loc_txt, "tssl_app_db_Loc_txt")
+		'
+		'mi_stPartners
+		'
+		Me.mi_stPartners.Name = "mi_stPartners"
+		resources.ApplyResources(Me.mi_stPartners, "mi_stPartners")
+		AddHandler Me.mi_stPartners.Click, AddressOf Me.Mi_stPartnersClick
 		'
 		'fnd_MainForm
 		'
@@ -127,6 +134,7 @@ Partial Class fnd_MainForm
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private mi_stPartners As System.Windows.Forms.ToolStripMenuItem
 	Private tssl_app_db_Loc_txt As System.Windows.Forms.ToolStripStatusLabel
 	Private tssl_app_db_Loc As System.Windows.Forms.ToolStripStatusLabel
 	Private tssl_app_db_txt As System.Windows.Forms.ToolStripStatusLabel

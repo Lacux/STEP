@@ -68,7 +68,14 @@ Public Partial Class fnd_MainForm
 			Me.menu_MainMenu.Show
 			Me.tssl_app_user_txt.Text = G_US_NAME
 			Me.tssl_app_db_txt.Text = G_APP_DB_NAME
-			Me.tssl_app_db_Loc_txt.Text = G_DB_LOCATION
+			Me.tssl_app_db_Loc_txt.Text = G_DB_HOST & ":"& G_DB_LOCATION
 		End If
+	End Sub
+	
+	Sub Mi_stPartnersClick(sender As Object, e As EventArgs)
+		Dim oForm As New pz_partyList
+		oForm.MdiParent = Me
+		oForm.Show()
+		oForm = Nothing
 	End Sub
 End Class

@@ -79,6 +79,10 @@
     <Compile Include="APP\FND\frmFNDMainForm.vb" />
     <Compile Include="APP\FND\modFNDAppData.vb" />
     <Compile Include="APP\FND\modFNDOpenForms.vb" />
+    <Compile Include="APP\PZ\frmPZPartyList.Designer.vb">
+      <DependentUpon>frmPZPartyList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APP\PZ\frmPZPartyList.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>
@@ -96,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="APP\FND\frmFNDDBAddCreate.resx">
       <DependentUpon>frmFNDDBAddCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PZ\frmPZPartyList.lv.resx">
+      <DependentUpon>frmPZPartyList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PZ\frmPZPartyList.resx">
+      <DependentUpon>frmPZPartyList.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="APP\FND\Images\Add_db_32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -136,6 +146,24 @@
     <None Include="APP\FND\Images\User_db_16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="APP\PZ\Images\Clean_PZ_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\PZ\Images\Edit_PZ_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\PZ\Images\New_PZ_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\PZ\Images\New_PZ_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\PZ\Images\Search_PZ_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\PZ\Images\Search_PZ_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="FbDataBase\FbEmbed\aliases.conf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -169,6 +197,8 @@
     <Folder Include="APP\FND" />
     <Folder Include="APP\FND\Images" />
     <Folder Include="APP\FND\DB" />
+    <Folder Include="APP\PZ" />
+    <Folder Include="APP\PZ\Images" />
     <Folder Include="FbDataBase" />
     <Folder Include="FbDataBase\FbEmbed" />
   </ItemGroup>
