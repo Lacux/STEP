@@ -57,19 +57,21 @@ Public Partial Class fnd_MainForm
 	End Sub
 	
 	
-	Sub Fnd_MainFormMdiChildActivate(sender As Object, e As EventArgs) _
+	Sub Fnd_MainFormMdiChildActivate(sender As Object, e As EventArgs) 
+		For each f as Form in System.Windows.Forms.Application.OpenForms
+			If f.Name.ToString = "fnd_Connections" Or G_FND_VALID = 0 Then
+				Me.menu_MainMenu.Hide
+				Me.tssl_app_user_txt.Text = ""
+				Me.tssl_app_db_txt.Text = ""
+				Me.tssl_app_db_Loc_txt.Text = ""
+			Else
+				Me.menu_MainMenu.Show
+				Me.tssl_app_user_txt.Text = G_US_NAME
+				Me.tssl_app_db_txt.Text = G_APP_DB_NAME
+				Me.tssl_app_db_Loc_txt.Text = G_DB_HOST & ":"& G_DB_LOCATION
+			End if
+		Next f	
 		
-		If Not IsNothing(modFNDOpenForms.fndOpenForms("fnd_Connections")) Or G_FND_VALID = 0 Then
-			Me.menu_MainMenu.Hide
-			Me.tssl_app_user_txt.Text = ""
-			Me.tssl_app_db_txt.Text = ""
-			Me.tssl_app_db_Loc_txt.Text = ""
-		Else
-			Me.menu_MainMenu.Show
-			Me.tssl_app_user_txt.Text = G_US_NAME
-			Me.tssl_app_db_txt.Text = G_APP_DB_NAME
-			Me.tssl_app_db_Loc_txt.Text = G_DB_HOST & ":"& G_DB_LOCATION
-		End If
 	End Sub
 	
 	Sub Mi_stPartnersClick(sender As Object, e As EventArgs)

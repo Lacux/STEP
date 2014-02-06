@@ -252,4 +252,23 @@
   <data name="strMainFormDBLocation" xml:space="preserve">
     <value>Adrese: </value>
   </data>
+  <data name="profndcondbapperr1" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst procedūras identifikātora.</value>
+  </data>
+  <data name="profndcondbapperr2" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst datubāzes versija.</value>
+  </data>
+  <data name="profndcondbapperr3" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst progammas identifikātora.
+</value>
+  </data>
+  <data name="profndcondbapperr4" xml:space="preserve">
+    <value>Esošā datu bāzes versija ir novecojusi, lai turpinātu darbu nepieciešams to atjaunot. Vai veikt datubāzes uzlabošanu?</value>
+  </data>
+  <data name="profndcondbapperr5" xml:space="preserve">
+    <value>Esošā progammas versija ir vecāka, nekā izvēlētā datu bāze, lai tupinātu darbu ar šo datu bāzi lūdzu uzstādiet jaunāko programmu vai vismaz versiju: </value>
+  </data>
+  <data name="strConnUpgrFailed" xml:space="preserve">
+    <value>Atjaunojumus nebija iespējams uzstādīt. Lūdzu sazinieties ar izstrādātāju. </value>
+  </data>
 </root>

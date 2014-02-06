@@ -39,6 +39,9 @@ Partial Class pz_partyList
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pz_partyList))
 		Me.pb_logo = New System.Windows.Forms.PictureBox()
 		Me.gb_Menu = New System.Windows.Forms.GroupBox()
+		Me.lb_Group = New System.Windows.Forms.Label()
+		Me.tb_Group = New System.Windows.Forms.TextBox()
+		Me.bt_Reports = New System.Windows.Forms.Button()
 		Me.lb_RegReference = New System.Windows.Forms.Label()
 		Me.lb_name = New System.Windows.Forms.Label()
 		Me.cb_Active = New System.Windows.Forms.CheckBox()
@@ -52,12 +55,14 @@ Partial Class pz_partyList
 		Me.dgv_partnerList = New System.Windows.Forms.DataGridView()
 		Me.PARTY_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.PARTY_NUMBER = New System.Windows.Forms.DataGridViewTextBoxColumn()
+		Me.PARTY_TYPE = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.PARTY_TYPE_NAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.PARTY_ORG_NAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.PARTY_NAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.REG_REFERENCE = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.TAX_REFERENCE = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.PARTY_GROUP_NAME = New System.Windows.Forms.DataGridViewTextBoxColumn()
+		Me.PARTY_GENERAL_ADDRESS = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.STATUS_FLAG = New System.Windows.Forms.DataGridViewCheckBoxColumn()
 		Me.cms_newPZ = New System.Windows.Forms.ContextMenuStrip(Me.components)
 		CType(Me.pb_logo,System.ComponentModel.ISupportInitialize).BeginInit
@@ -74,6 +79,9 @@ Partial Class pz_partyList
 		'gb_Menu
 		'
 		Me.gb_Menu.BackColor = System.Drawing.SystemColors.Control
+		Me.gb_Menu.Controls.Add(Me.lb_Group)
+		Me.gb_Menu.Controls.Add(Me.tb_Group)
+		Me.gb_Menu.Controls.Add(Me.bt_Reports)
 		Me.gb_Menu.Controls.Add(Me.lb_RegReference)
 		Me.gb_Menu.Controls.Add(Me.lb_name)
 		Me.gb_Menu.Controls.Add(Me.cb_Active)
@@ -87,6 +95,22 @@ Partial Class pz_partyList
 		resources.ApplyResources(Me.gb_Menu, "gb_Menu")
 		Me.gb_Menu.Name = "gb_Menu"
 		Me.gb_Menu.TabStop = false
+		'
+		'lb_Group
+		'
+		resources.ApplyResources(Me.lb_Group, "lb_Group")
+		Me.lb_Group.Name = "lb_Group"
+		'
+		'tb_Group
+		'
+		resources.ApplyResources(Me.tb_Group, "tb_Group")
+		Me.tb_Group.Name = "tb_Group"
+		'
+		'bt_Reports
+		'
+		resources.ApplyResources(Me.bt_Reports, "bt_Reports")
+		Me.bt_Reports.Name = "bt_Reports"
+		Me.bt_Reports.UseVisualStyleBackColor = true
 		'
 		'lb_RegReference
 		'
@@ -154,12 +178,15 @@ Partial Class pz_partyList
 		'
 		Me.dgv_partnerList.AllowUserToAddRows = false
 		Me.dgv_partnerList.AllowUserToDeleteRows = false
+		Me.dgv_partnerList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
 		Me.dgv_partnerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dgv_partnerList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PARTY_ID, Me.PARTY_NUMBER, Me.PARTY_TYPE_NAME, Me.PARTY_ORG_NAME, Me.PARTY_NAME, Me.REG_REFERENCE, Me.TAX_REFERENCE, Me.PARTY_GROUP_NAME, Me.STATUS_FLAG})
+		Me.dgv_partnerList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PARTY_ID, Me.PARTY_NUMBER, Me.PARTY_TYPE, Me.PARTY_TYPE_NAME, Me.PARTY_ORG_NAME, Me.PARTY_NAME, Me.REG_REFERENCE, Me.TAX_REFERENCE, Me.PARTY_GROUP_NAME, Me.PARTY_GENERAL_ADDRESS, Me.STATUS_FLAG})
 		resources.ApplyResources(Me.dgv_partnerList, "dgv_partnerList")
+		Me.dgv_partnerList.MultiSelect = false
 		Me.dgv_partnerList.Name = "dgv_partnerList"
 		Me.dgv_partnerList.ReadOnly = true
 		Me.dgv_partnerList.RowTemplate.Height = 24
+		AddHandler Me.dgv_partnerList.DoubleClick, AddressOf Me.Dgv_partnerListDoubleClick
 		'
 		'PARTY_ID
 		'
@@ -172,6 +199,12 @@ Partial Class pz_partyList
 		resources.ApplyResources(Me.PARTY_NUMBER, "PARTY_NUMBER")
 		Me.PARTY_NUMBER.Name = "PARTY_NUMBER"
 		Me.PARTY_NUMBER.ReadOnly = true
+		'
+		'PARTY_TYPE
+		'
+		resources.ApplyResources(Me.PARTY_TYPE, "PARTY_TYPE")
+		Me.PARTY_TYPE.Name = "PARTY_TYPE"
+		Me.PARTY_TYPE.ReadOnly = true
 		'
 		'PARTY_TYPE_NAME
 		'
@@ -209,6 +242,12 @@ Partial Class pz_partyList
 		Me.PARTY_GROUP_NAME.Name = "PARTY_GROUP_NAME"
 		Me.PARTY_GROUP_NAME.ReadOnly = true
 		'
+		'PARTY_GENERAL_ADDRESS
+		'
+		resources.ApplyResources(Me.PARTY_GENERAL_ADDRESS, "PARTY_GENERAL_ADDRESS")
+		Me.PARTY_GENERAL_ADDRESS.Name = "PARTY_GENERAL_ADDRESS"
+		Me.PARTY_GENERAL_ADDRESS.ReadOnly = true
+		'
 		'STATUS_FLAG
 		'
 		resources.ApplyResources(Me.STATUS_FLAG, "STATUS_FLAG")
@@ -234,6 +273,11 @@ Partial Class pz_partyList
 		CType(Me.dgv_partnerList,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 	End Sub
+	Private PARTY_TYPE As System.Windows.Forms.DataGridViewTextBoxColumn
+	Private PARTY_GENERAL_ADDRESS As System.Windows.Forms.DataGridViewTextBoxColumn
+	Private tb_Group As System.Windows.Forms.TextBox
+	Private lb_Group As System.Windows.Forms.Label
+	Private bt_Reports As System.Windows.Forms.Button
 	Private cms_newPZ As System.Windows.Forms.ContextMenuStrip
 	Private PARTY_ORG_NAME As System.Windows.Forms.DataGridViewTextBoxColumn
 	Private STATUS_FLAG As System.Windows.Forms.DataGridViewCheckBoxColumn

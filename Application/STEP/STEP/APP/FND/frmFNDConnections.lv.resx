@@ -159,4 +159,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Datubāzes</value>
   </data>
+  <data name="lb_wait.Text" xml:space="preserve">
+    <value>Lūdzu uzgaidiet ...</value>
+  </data>
 </root>

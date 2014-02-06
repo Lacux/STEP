@@ -80,9 +80,9 @@ Partial Class fnd_DBAddCreate
 		'cb_db_type
 		'
 		Me.cb_db_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+		resources.ApplyResources(Me.cb_db_type, "cb_db_type")
 		Me.cb_db_type.FormattingEnabled = true
 		Me.cb_db_type.Items.AddRange(New Object() {resources.GetString("cb_db_type.Items"), resources.GetString("cb_db_type.Items1")})
-		resources.ApplyResources(Me.cb_db_type, "cb_db_type")
 		Me.cb_db_type.Name = "cb_db_type"
 		AddHandler Me.cb_db_type.SelectedIndexChanged, AddressOf Me.Cb_DB_typeSelectedIndexChanged
 		'

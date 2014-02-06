@@ -38,6 +38,7 @@ Partial Class fnd_MainForm
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fnd_MainForm))
 		Me.menu_MainMenu = New System.Windows.Forms.MenuStrip()
 		Me.mi_stDataBase = New System.Windows.Forms.ToolStripMenuItem()
+		Me.mi_stPartners = New System.Windows.Forms.ToolStripMenuItem()
 		Me.mi_stWindows = New System.Windows.Forms.ToolStripMenuItem()
 		Me.statusStrip1 = New System.Windows.Forms.StatusStrip()
 		Me.tssl_app_user = New System.Windows.Forms.ToolStripStatusLabel()
@@ -46,7 +47,6 @@ Partial Class fnd_MainForm
 		Me.tssl_app_db_txt = New System.Windows.Forms.ToolStripStatusLabel()
 		Me.tssl_app_db_Loc = New System.Windows.Forms.ToolStripStatusLabel()
 		Me.tssl_app_db_Loc_txt = New System.Windows.Forms.ToolStripStatusLabel()
-		Me.mi_stPartners = New System.Windows.Forms.ToolStripMenuItem()
 		Me.menu_MainMenu.SuspendLayout
 		Me.statusStrip1.SuspendLayout
 		Me.SuspendLayout
@@ -64,6 +64,12 @@ Partial Class fnd_MainForm
 		Me.mi_stDataBase.Name = "mi_stDataBase"
 		resources.ApplyResources(Me.mi_stDataBase, "mi_stDataBase")
 		AddHandler Me.mi_stDataBase.Click, AddressOf Me.Mi_stDataBaseClick
+		'
+		'mi_stPartners
+		'
+		Me.mi_stPartners.Name = "mi_stPartners"
+		resources.ApplyResources(Me.mi_stPartners, "mi_stPartners")
+		AddHandler Me.mi_stPartners.Click, AddressOf Me.Mi_stPartnersClick
 		'
 		'mi_stWindows
 		'
@@ -109,12 +115,6 @@ Partial Class fnd_MainForm
 		Me.tssl_app_db_Loc_txt.ForeColor = System.Drawing.Color.Crimson
 		Me.tssl_app_db_Loc_txt.Name = "tssl_app_db_Loc_txt"
 		resources.ApplyResources(Me.tssl_app_db_Loc_txt, "tssl_app_db_Loc_txt")
-		'
-		'mi_stPartners
-		'
-		Me.mi_stPartners.Name = "mi_stPartners"
-		resources.ApplyResources(Me.mi_stPartners, "mi_stPartners")
-		AddHandler Me.mi_stPartners.Click, AddressOf Me.Mi_stPartnersClick
 		'
 		'fnd_MainForm
 		'

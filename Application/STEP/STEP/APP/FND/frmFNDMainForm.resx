@@ -143,7 +143,7 @@
     <value>0, 0</value>
   </data>
   <data name="menu_MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1069, 28</value>
+    <value>1482, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menu_MainMenu.TabIndex" type="System.Int32, mscorlib">
@@ -204,10 +204,10 @@
     <value>0, 17</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 539</value>
+    <value>0, 933</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1069, 22</value>
+    <value>1482, 22</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -234,7 +234,11 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1069, 561</value>
+    <value>1482, 955</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>STEP</value>
@@ -243,6 +247,12 @@
     <value>mi_stDataBase</value>
   </data>
   <data name="&gt;&gt;mi_stDataBase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mi_stPartners.Name" xml:space="preserve">
+    <value>mi_stPartners</value>
+  </data>
+  <data name="&gt;&gt;mi_stPartners.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mi_stWindows.Name" xml:space="preserve">
@@ -286,12 +296,6 @@
   </data>
   <data name="&gt;&gt;tssl_app_db_Loc_txt.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mi_stPartners.Name" xml:space="preserve">
-    <value>mi_stPartners</value>
-  </data>
-  <data name="&gt;&gt;mi_stPartners.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>fnd_MainForm</value>

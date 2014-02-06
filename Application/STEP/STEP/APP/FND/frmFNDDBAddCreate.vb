@@ -119,19 +119,19 @@ Public Partial Class fnd_DBAddCreate
 				If resultDB = "Y" Then
 					Me.pg_bd_info.Increment(16)
 					Me.lb_db_info.Text = MsgTransl.GetString("strCreatDBTables")
-					resultDB = clsFNDDatabase.CreateTables()
+					resultDB = clsFNDDatabase.RunSQLFFDB("NewDBTablesGen.txt")
 					If resultDB = "Y" Then
 						Me.pg_bd_info.Increment(17)
 						Me.lb_db_info.Text = MsgTransl.GetString("strCreatDBData")
-						resultDB = clsFNDDatabase.InsertData()
+						resultDB = clsFNDDatabase.RunSQLFFDB("NewDBDataLV.txt")
 						If resultDB = "Y" Then
 							Me.pg_bd_info.Increment(17)
 							Me.lb_db_info.Text = MsgTransl.GetString("strCreatDBProc")
-							resultDB = clsFNDDatabase.CreateProcedures()  
+							resultDB = clsFNDDatabase.RunSQLFFDB("NewDBProcedures.txt")  
 							If resultDB = "Y" Then
 								Me.pg_bd_info.Increment(17)
 								Me.lb_db_info.Text = MsgTransl.GetString("strCreatDBTrigg")
-								resultDB = clsFNDDatabase.CreateTriggers() 
+								resultDB = clsFNDDatabase.RunSQLFFDB("NewDBTriggers.txt") 
 								If resultDB = "Y" then
 									Me.pg_bd_info.Increment(17)
 									Dim dBaseConnection As New System.Data.OleDb.OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; " & _
@@ -225,4 +225,5 @@ Public Partial Class fnd_DBAddCreate
 			End Try	
 		End if
 	End Sub
+	
 End Class

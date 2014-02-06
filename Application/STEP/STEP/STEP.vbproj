@@ -78,23 +78,18 @@
     </Compile>
     <Compile Include="APP\FND\frmFNDMainForm.vb" />
     <Compile Include="APP\FND\modFNDAppData.vb" />
-    <Compile Include="APP\FND\modFNDOpenForms.vb" />
     <Compile Include="APP\PZ\frmPZPartyList.Designer.vb">
       <DependentUpon>frmPZPartyList.vb</DependentUpon>
     </Compile>
     <Compile Include="APP\PZ\frmPZPartyList.vb" />
+    <Compile Include="APP\PZ\frm_PZPartyEdit.Designer.vb">
+      <DependentUpon>frm_PZPartyEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APP\PZ\frm_PZPartyEdit.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="APP\FND\DB\NewDBTablesGen.txt" />
-    <EmbeddedResource Include="APP\FND\DB\NewDBData.txt" />
-    <EmbeddedResource Include="APP\FND\DB\NewDBProcedures.txt">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="APP\FND\DB\NewDBTriggers.txt">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="APP\FND\frmFNDDBAddCreate.lv.resx">
       <DependentUpon>frmFNDDBAddCreate.vb</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +101,32 @@
     </EmbeddedResource>
     <EmbeddedResource Include="APP\PZ\frmPZPartyList.resx">
       <DependentUpon>frmPZPartyList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PZ\frm_PZPartyEdit.lv.resx">
+      <DependentUpon>frm_PZPartyEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PZ\frm_PZPartyEdit.resx">
+      <DependentUpon>frm_PZPartyEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PZ\resPZMessages.lv.resx" />
+    <EmbeddedResource Include="APP\PZ\resPZMessages.resx" />
+    <EmbeddedResource Include="APP\FND\DB\EmptyDB\NewDBDataLV.txt" />
+    <EmbeddedResource Include="APP\FND\DB\EmptyDB\NewDBProcedures.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\DB\EmptyDB\NewDBTablesGen.txt" />
+    <EmbeddedResource Include="APP\FND\DB\EmptyDB\NewDBTriggers.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\FND\DB\Updates\0.9.1\UpdDBProcedures0.9.1.txt" />
+    <EmbeddedResource Include="APP\FND\DB\Updates\0.9.1\UpdDBTablesGen0.9.1.txt" />
+    <EmbeddedResource Include="APP\FND\DB\Updates\0.9.1\UpdDBTriggers0.9.1.txt" />
+    <EmbeddedResource Include="APP\FND\DB\Updates\1.0.0\UpdDBDataLV1.0.0.txt" />
+    <EmbeddedResource Include="APP\FND\DB\Updates\1.0.0\UpdDBProcedures1.0.0.txt" />
+    <EmbeddedResource Include="APP\FND\DB\Updates\1.0.0\UpdDBTablesGen1.0.0.txt" />
+    <EmbeddedResource Include="APP\FND\DB\Updates\1.0.0\UpdDBTriggers1.0.0.txt" />
+    <EmbeddedResource Include="APP\FND\DB\Updates\0.9.1\UpdDBDataLV0.9.1.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="APP\FND\Images\Add_db_32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -158,6 +179,12 @@
     <None Include="APP\PZ\Images\New_PZ_64.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="APP\PZ\Images\Reports_PZ_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="APP\PZ\Images\Save_PZ_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="APP\PZ\Images\Search_PZ_32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -195,6 +222,10 @@
   <ItemGroup>
     <Folder Include="APP" />
     <Folder Include="APP\FND" />
+    <Folder Include="APP\FND\DB\EmptyDB" />
+    <Folder Include="APP\FND\DB\Updates" />
+    <Folder Include="APP\FND\DB\Updates\0.9.1" />
+    <Folder Include="APP\FND\DB\Updates\1.0.0" />
     <Folder Include="APP\FND\Images" />
     <Folder Include="APP\FND\DB" />
     <Folder Include="APP\PZ" />

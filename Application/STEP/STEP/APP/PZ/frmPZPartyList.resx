@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pb_logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 12</value>
+    <value>45, 14</value>
   </data>
   <data name="pb_logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
+    <value>64, 72</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pb_logo.TabIndex" type="System.Int32, mscorlib">
@@ -144,6 +144,93 @@
   <data name="&gt;&gt;pb_logo.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="lb_Group.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
+  </data>
+  <data name="lb_Group.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_Group.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 24</value>
+  </data>
+  <data name="lb_Group.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 26</value>
+  </data>
+  <data name="lb_Group.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lb_Group.Text" xml:space="preserve">
+    <value>lb_Group</value>
+  </data>
+  <data name="&gt;&gt;lb_Group.Name" xml:space="preserve">
+    <value>lb_Group</value>
+  </data>
+  <data name="&gt;&gt;lb_Group.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_Group.Parent" xml:space="preserve">
+    <value>gb_Menu</value>
+  </data>
+  <data name="&gt;&gt;lb_Group.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tb_Group.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 60</value>
+  </data>
+  <data name="tb_Group.MaxLength" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="tb_Group.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 26</value>
+  </data>
+  <data name="tb_Group.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;tb_Group.Name" xml:space="preserve">
+    <value>tb_Group</value>
+  </data>
+  <data name="&gt;&gt;tb_Group.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_Group.Parent" xml:space="preserve">
+    <value>gb_Menu</value>
+  </data>
+  <data name="&gt;&gt;tb_Group.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bt_Reports.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="bt_Reports.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_Reports.Location" type="System.Drawing.Point, System.Drawing">
+    <value>968, 25</value>
+  </data>
+  <data name="bt_Reports.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 61</value>
+  </data>
+  <data name="bt_Reports.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="bt_Reports.Text" xml:space="preserve">
+    <value>&amp;bt_Reports</value>
+  </data>
+  <data name="bt_Reports.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="&gt;&gt;bt_Reports.Name" xml:space="preserve">
+    <value>bt_Reports</value>
+  </data>
+  <data name="&gt;&gt;bt_Reports.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_Reports.Parent" xml:space="preserve">
+    <value>gb_Menu</value>
+  </data>
+  <data name="&gt;&gt;bt_Reports.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="lb_RegReference.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
@@ -151,10 +238,10 @@
     <value>NoControl</value>
   </data>
   <data name="lb_RegReference.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 21</value>
+    <value>307, 24</value>
   </data>
   <data name="lb_RegReference.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 23</value>
+    <value>162, 26</value>
   </data>
   <data name="lb_RegReference.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -172,16 +259,16 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;lb_RegReference.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="lb_name.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
   <data name="lb_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 21</value>
+    <value>139, 24</value>
   </data>
   <data name="lb_name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 23</value>
+    <value>162, 26</value>
   </data>
   <data name="lb_name.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -199,7 +286,7 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;lb_name.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="cb_Active.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -211,10 +298,10 @@
     <value>NoControl</value>
   </data>
   <data name="cb_Active.Location" type="System.Drawing.Point, System.Drawing">
-    <value>504, 30</value>
+    <value>622, 37</value>
   </data>
   <data name="cb_Active.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 43</value>
+    <value>66, 48</value>
   </data>
   <data name="cb_Active.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -235,16 +322,16 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;cb_Active.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="tb_RegReference.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 52</value>
+    <value>307, 60</value>
   </data>
   <data name="tb_RegReference.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <data name="tb_RegReference.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>162, 26</value>
   </data>
   <data name="tb_RegReference.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -259,16 +346,16 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;tb_RegReference.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="tb_Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 53</value>
+    <value>139, 60</value>
   </data>
   <data name="tb_Name.MaxLength" type="System.Int32, mscorlib">
     <value>150</value>
   </data>
   <data name="tb_Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>162, 26</value>
   </data>
   <data name="tb_Name.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -283,16 +370,16 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;tb_Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="lb_type.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
   <data name="lb_type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
+    <value>6, 24</value>
   </data>
   <data name="lb_type.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 23</value>
+    <value>127, 26</value>
   </data>
   <data name="lb_type.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -310,13 +397,13 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;lb_type.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="cb_type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 50</value>
+    <value>6, 60</value>
   </data>
   <data name="cb_type.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 24</value>
+    <value>127, 26</value>
   </data>
   <data name="cb_type.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -331,7 +418,7 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;cb_type.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="bt_New.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -340,10 +427,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_New.Location" type="System.Drawing.Point, System.Drawing">
-    <value>758, 21</value>
+    <value>877, 25</value>
   </data>
   <data name="bt_New.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 54</value>
+    <value>85, 61</value>
   </data>
   <data name="bt_New.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -364,7 +451,7 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;bt_New.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="bt_Clear.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -373,10 +460,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_Clear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 21</value>
+    <value>786, 25</value>
   </data>
   <data name="bt_Clear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 54</value>
+    <value>85, 61</value>
   </data>
   <data name="bt_Clear.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -397,7 +484,7 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;bt_Clear.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="bt_Find.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -406,10 +493,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_Find.Location" type="System.Drawing.Point, System.Drawing">
-    <value>576, 21</value>
+    <value>695, 25</value>
   </data>
   <data name="bt_Find.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 54</value>
+    <value>85, 61</value>
   </data>
   <data name="bt_Find.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -430,13 +517,13 @@
     <value>gb_Menu</value>
   </data>
   <data name="&gt;&gt;bt_Find.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="gb_Menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 12</value>
+    <value>146, 14</value>
   </data>
   <data name="gb_Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>852, 81</value>
+    <value>1059, 91</value>
   </data>
   <data name="gb_Menu.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -459,6 +546,57 @@
   <metadata name="PARTY_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="PARTY_NUMBER.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PARTY_TYPE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PARTY_TYPE_NAME.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PARTY_NAME.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="REG_REFERENCE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TAX_REFERENCE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PARTY_GROUP_NAME.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PARTY_GENERAL_ADDRESS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="STATUS_FLAG.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dgv_partnerList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 111</value>
+  </data>
+  <data name="dgv_partnerList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1193, 420</value>
+  </data>
+  <data name="dgv_partnerList.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;dgv_partnerList.Name" xml:space="preserve">
+    <value>dgv_partnerList</value>
+  </data>
+  <data name="&gt;&gt;dgv_partnerList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgv_partnerList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgv_partnerList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="PARTY_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PARTY_ID.HeaderText" xml:space="preserve">
     <value>PARTY_ID</value>
   </data>
@@ -470,6 +608,15 @@
   </metadata>
   <data name="PARTY_NUMBER.HeaderText" xml:space="preserve">
     <value>PARTY_NUMBER</value>
+  </data>
+  <metadata name="PARTY_TYPE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PARTY_TYPE.HeaderText" xml:space="preserve">
+    <value>PARTY_TYPE</value>
+  </data>
+  <data name="PARTY_TYPE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <metadata name="PARTY_TYPE_NAME.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -519,6 +666,15 @@
   <data name="PARTY_GROUP_NAME.HeaderText" xml:space="preserve">
     <value>PARTY_GROUP_NAME</value>
   </data>
+  <metadata name="PARTY_GENERAL_ADDRESS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PARTY_GENERAL_ADDRESS.HeaderText" xml:space="preserve">
+    <value>PARTY_GENERAL_ADDRESS</value>
+  </data>
+  <data name="PARTY_GENERAL_ADDRESS.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
   <metadata name="STATUS_FLAG.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -527,27 +683,6 @@
   </data>
   <data name="STATUS_FLAG.Width" type="System.Int32, mscorlib">
     <value>70</value>
-  </data>
-  <data name="dgv_partnerList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 99</value>
-  </data>
-  <data name="dgv_partnerList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>986, 373</value>
-  </data>
-  <data name="dgv_partnerList.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;dgv_partnerList.Name" xml:space="preserve">
-    <value>dgv_partnerList</value>
-  </data>
-  <data name="&gt;&gt;dgv_partnerList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgv_partnerList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dgv_partnerList.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="cms_newPZ.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -565,10 +700,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>8, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 484</value>
+    <value>1217, 539</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>pz_partyList</value>
@@ -583,6 +724,12 @@
     <value>PARTY_NUMBER</value>
   </data>
   <data name="&gt;&gt;PARTY_NUMBER.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PARTY_TYPE.Name" xml:space="preserve">
+    <value>PARTY_TYPE</value>
+  </data>
+  <data name="&gt;&gt;PARTY_TYPE.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PARTY_TYPE_NAME.Name" xml:space="preserve">
@@ -619,6 +766,12 @@
     <value>PARTY_GROUP_NAME</value>
   </data>
   <data name="&gt;&gt;PARTY_GROUP_NAME.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PARTY_GENERAL_ADDRESS.Name" xml:space="preserve">
+    <value>PARTY_GENERAL_ADDRESS</value>
+  </data>
+  <data name="&gt;&gt;PARTY_GENERAL_ADDRESS.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;STATUS_FLAG.Name" xml:space="preserve">

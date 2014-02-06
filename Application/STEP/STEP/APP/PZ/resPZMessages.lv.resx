@@ -117,64 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="gb_Menu.Text" xml:space="preserve">
-    <value>Izvēlne</value>
+  <data name="propzpartyerr1" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst procedūras identifikātora.</value>
   </data>
-  <data name="lb_Group.Text" xml:space="preserve">
-    <value>Grupa</value>
+  <data name="propzpartyerr2" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst partnera identifikatora.</value>
   </data>
-  <data name="bt_Reports.Text" xml:space="preserve">
-    <value>&amp;Atskaites</value>
+  <data name="propzpartyerr3" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst tipa identifikātora.</value>
   </data>
-  <data name="lb_RegReference.Text" xml:space="preserve">
-    <value>Reģistrācijas Nr.</value>
+  <data name="propzpartyerr4" xml:space="preserve">
+    <value>Lūdzu ievadiet partnera veidu.</value>
   </data>
-  <data name="lb_name.Text" xml:space="preserve">
-    <value>Nosaukums</value>
+  <data name="propzpartyerr5" xml:space="preserve">
+    <value>Lūdzu ievadiet partnera nosaukumu.</value>
   </data>
-  <data name="cb_Active.Text" xml:space="preserve">
-    <value>Aktīvs</value>
+  <data name="propzpartyerr6" xml:space="preserve">
+    <value>Lūdzu ievadiet vārdu un/vai uzvārdu.</value>
   </data>
-  <data name="lb_type.Text" xml:space="preserve">
-    <value>Tips</value>
+  <data name="propzpartyerr7" xml:space="preserve">
+    <value>Partneris ar šādu nosaukumu jau pastāv: </value>
   </data>
-  <data name="bt_New.Text" xml:space="preserve">
-    <value>&amp;Jauns</value>
+  <data name="propzpartyerr8" xml:space="preserve">
+    <value>Partneris ar šādu reģistrācijas Nr./personas kodu jau pastāv.</value>
   </data>
-  <data name="bt_Clear.Text" xml:space="preserve">
-    <value>&amp;Notīrīt</value>
+  <data name="strPartyEditCont" xml:space="preserve">
+    <value>Vai turpināt?</value>
   </data>
-  <data name="bt_Find.Text" xml:space="preserve">
-    <value>&amp;Meklēt</value>
+  <data name="strPartyEditType" xml:space="preserve">
+    <value>Tips: </value>
   </data>
-  <data name="PARTY_NUMBER.HeaderText" xml:space="preserve">
-    <value>Nr.</value>
+  <data name="strPartyEditName" xml:space="preserve">
+    <value>Nosaukums: </value>
   </data>
-  <data name="PARTY_TYPE_NAME.HeaderText" xml:space="preserve">
-    <value>Tips</value>
+  <data name="strPartyEditReg" xml:space="preserve">
+    <value>Reģistrācijas Nr./Personas kods: </value>
   </data>
-  <data name="PARTY_ORG_NAME.HeaderText" xml:space="preserve">
-    <value>Veids</value>
+  <data name="strPartyEditReg1" xml:space="preserve">
+    <value>Reģistrācijas Nr.:</value>
   </data>
-  <data name="PARTY_NAME.HeaderText" xml:space="preserve">
-    <value>Nosaukums</value>
+  <data name="strPartyEditReg2" xml:space="preserve">
+    <value>Personas kods:</value>
   </data>
-  <data name="REG_REFERENCE.HeaderText" xml:space="preserve">
-    <value>Reģistrācijas Nr.</value>
+  <data name="strPartyEditNew" xml:space="preserve">
+    <value>Jauns partneris</value>
   </data>
-  <data name="TAX_REFERENCE.HeaderText" xml:space="preserve">
-    <value>PVN Nr.</value>
+  <data name="strPartyEditEdit" xml:space="preserve">
+    <value>Labot partneri</value>
   </data>
-  <data name="PARTY_GROUP_NAME.HeaderText" xml:space="preserve">
-    <value>Grupa</value>
+  <data name="propztypeserr1" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst procedūras identifikātora.</value>
   </data>
-  <data name="PARTY_GENERAL_ADDRESS.HeaderText" xml:space="preserve">
-    <value>Galvenā adrese</value>
+  <data name="propztypeserr2" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst meklēšanas parametru.</value>
   </data>
-  <data name="STATUS_FLAG.HeaderText" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Partneru saraksts</value>
+  <data name="propztypeserr3" xml:space="preserve">
+    <value>Sistēmas kļūda: Trūkst meklēšanas parametru.</value>
   </data>
 </root>

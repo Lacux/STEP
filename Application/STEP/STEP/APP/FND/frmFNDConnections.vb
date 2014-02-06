@@ -181,10 +181,67 @@ Public Partial Class fnd_Connections
 					Using FbAdapterUSER As New FbDataAdapter(command)
 						FbAdapterUSER.Fill( FBDS, "LogInResult")
 						If CType(FBDS.Tables("LogInResult").Rows(0).Item(0), String) = "profnduserr0" Then
-							G_US_NAME = CType(FBDS.Tables("LogInResult").Rows(0).Item(1), String)	
-							G_FND_VALID = 1
-							'	Me.ParentForm.Controls.
-							Me.Close
+							
+							' Call procedure - to check compability with db
+							Dim result As clsFNDDatabase.CheckCompabilityStructure
+							result = clsFNDDatabase.CheckCompability
+							If result.p_app_validation = 1 Then
+								' If all is OK
+								If result.p_app_error = "profndcondbapperr0" Then
+									G_US_NAME = CType(FBDS.Tables("LogInResult").Rows(0).Item(1), String)	
+									G_FND_VALID = 1
+									Me.Close
+									' If DB is Old
+								Else If result.p_app_error = "profndcondbapperr4" Then
+									Dim MessageUpd = MessageBox.Show(MsgTransl.GetString(result.p_app_error), _
+										MsgTransl.GetString("strWarning"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, _
+										MessageBoxDefaultButton.Button1)
+									If MessageUpd = DialogResult.Yes Then 
+										lb_wait.Visible = True
+										
+										' Set backup mode
+										Dim backup As String
+										backup = clsFNDDatabase.FBBackMode(0)
+										If backup = "Y" Then
+											' Take a backup
+											Dim copyDB = clsFNDDatabase.BackUPDB
+											If copyDB = "Y" Then
+												' Start upgrade
+												Dim Version As String
+												Dim Upgrade As Integer
+												Version = result.p_db_version
+												Version = clsFNDDatabase.UpgradeDBVersioning(Version)
+												Do While Version <> "Final"			
+													Upgrade = clsFNDDatabase.UpgradeDB(Version)
+													Version = clsFNDDatabase.UpgradeDBVersioning(Version)
+												Loop
+												If Upgrade = 1 Then
+													G_US_NAME = CType(FBDS.Tables("LogInResult").Rows(0).Item(1), String)	
+													G_FND_VALID = 1
+													backup = clsFNDDatabase.FBBackMode(1)
+													lb_wait.Visible = False
+													Me.Close
+												Else 
+													MessageBox.Show(MsgTransl.GetString("strConnUpgrFailed"), _
+														MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Error, _
+														MessageBoxDefaultButton.Button1)	
+													lb_wait.Visible = False
+												End If
+											Else 
+												MessageBox.Show(MsgTransl.GetString("strError") & copyDB)
+											End If
+										Else
+											MessageBox.Show(MsgTransl.GetString("strError") & backup)
+										End if
+									End If
+								else
+									MessageBox.Show(MsgTransl.GetString(result.p_app_error) & G_APPS_NAME & " " & result.p_app_Version, _
+										MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, _
+										MessageBoxDefaultButton.Button1)
+								End If
+							Else 
+								MessageBox.Show(MsgTransl.GetString("strError") & result.p_app_error)	
+							End If
 						Else
 							MessageBox.Show(MsgTransl.GetString(CType(FBDS.Tables("LogInResult").Rows(0).Item(0), String)), _
 								MsgTransl.GetString("strWarning"), MessageBoxButtons.OK, MessageBoxIcon.Warning, _
@@ -238,11 +295,25 @@ Public Partial Class fnd_Connections
 	End Sub
 	
 	Sub Fnd_ConnectionsFormClosed(sender As Object, e As FormClosedEventArgs)
-		modFNDOpenForms.fndOpenForms.Remove(Me.Name)
 		Me.Dispose
 	End Sub
 	
-	Sub Fnd_ConnectionsLoad(sender As Object, e As EventArgs)
-		modFNDOpenForms.fndOpenForms.Add(Me.Name, Me)
+	
+	Sub Fnd_ConnectionsFormClosing(sender As Object, e As FormClosingEventArgs)
+		'Close related open form: fnd_DBAddCreate
+		Dim Success As Boolean
+		Do
+			success = true	
+			try
+				For each f as Form in System.Windows.Forms.Application.OpenForms
+					If f.Name.ToString = "fnd_DBAddCreate" Then
+						f.Close()
+					End If
+				Next f	
+			catch ex as exception
+				success = False	
+			end try
+		Loop until success
 	End Sub
+	
 End Class

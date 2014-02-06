@@ -242,6 +242,9 @@
   <data name="&gt;&gt;bt_Connet.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="gb_Menu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="gb_Menu.Location" type="System.Drawing.Point, System.Drawing">
     <value>146, 12</value>
   </data>
@@ -264,7 +267,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gb_Menu.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
+  </data>
+  <data name="lb_UserName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="lb_UserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 297</value>
@@ -288,7 +294,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_UserName.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
+  </data>
+  <data name="lb_Password.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="lb_Password.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 331</value>
@@ -312,7 +321,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_Password.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
+  </data>
+  <data name="tb_Password.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="tb_Password.Location" type="System.Drawing.Point, System.Drawing">
     <value>146, 328</value>
@@ -321,7 +333,7 @@
     <value>*</value>
   </data>
   <data name="tb_Password.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 22</value>
+    <value>372, 26</value>
   </data>
   <data name="tb_Password.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -336,7 +348,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tb_Password.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
+  </data>
+  <data name="tb_UserName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="tb_UserName.Location" type="System.Drawing.Point, System.Drawing">
     <value>146, 294</value>
@@ -345,7 +360,7 @@
     <value>10</value>
   </data>
   <data name="tb_UserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 22</value>
+    <value>372, 26</value>
   </data>
   <data name="tb_UserName.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -360,7 +375,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tb_UserName.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
+  </data>
+  <data name="lb_APPVersion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="lb_APPVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 79</value>
@@ -387,7 +405,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_APPVersion.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pb_logo.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 12</value>
@@ -408,7 +426,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pb_logo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="lb_APPLanguagle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lb_APPLanguagle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -436,7 +457,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lb_APPLanguagle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <data name="cb_APPLanguage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="cb_APPLanguage.Items" xml:space="preserve">
     <value>Latviešu</value>
@@ -445,7 +469,7 @@
     <value>146, 264</value>
   </data>
   <data name="cb_APPLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 24</value>
+    <value>372, 26</value>
   </data>
   <data name="cb_APPLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -460,7 +484,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cb_APPLanguage.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="db_type_v.Text" xml:space="preserve">
     <value>db_type_v</value>
@@ -492,6 +516,9 @@
   <data name="db_type.Width" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="lw_dblist.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="lw_dblist.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 105</value>
   </data>
@@ -511,6 +538,39 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lw_dblist.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lb_wait.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 13.8pt, style=Bold</value>
+  </data>
+  <data name="lb_wait.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 154</value>
+  </data>
+  <data name="lb_wait.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 45</value>
+  </data>
+  <data name="lb_wait.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lb_wait.Text" xml:space="preserve">
+    <value>lb_wait</value>
+  </data>
+  <data name="lb_wait.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lb_wait.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lb_wait.Name" xml:space="preserve">
+    <value>lb_wait</value>
+  </data>
+  <data name="&gt;&gt;lb_wait.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_wait.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lb_wait.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -520,7 +580,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>524, 357</value>
+    <value>531, 363</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

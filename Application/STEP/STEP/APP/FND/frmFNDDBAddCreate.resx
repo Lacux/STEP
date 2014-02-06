@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lb_DB_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="lb_DB_name.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 124</value>
   </data>
@@ -143,8 +146,11 @@
   <data name="&gt;&gt;lb_DB_name.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="lb_DB_address.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="lb_DB_address.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 152</value>
+    <value>12, 151</value>
   </data>
   <data name="lb_DB_address.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 23</value>
@@ -166,6 +172,9 @@
   </data>
   <data name="&gt;&gt;lb_DB_address.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="lb_DB_host.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="lb_DB_host.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 180</value>
@@ -191,6 +200,9 @@
   <data name="&gt;&gt;lb_DB_host.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="lb_DB_type.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="lb_DB_type.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 94</value>
   </data>
@@ -215,6 +227,9 @@
   <data name="&gt;&gt;lb_DB_type.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="cb_db_type.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="cb_db_type.Items" xml:space="preserve">
     <value>Viena lietotāja datu bāze</value>
   </data>
@@ -225,7 +240,7 @@
     <value>138, 91</value>
   </data>
   <data name="cb_db_type.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 24</value>
+    <value>299, 26</value>
   </data>
   <data name="cb_db_type.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -242,11 +257,14 @@
   <data name="&gt;&gt;cb_db_type.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="tb_db_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="tb_db_name.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 121</value>
   </data>
   <data name="tb_db_name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 22</value>
+    <value>299, 26</value>
   </data>
   <data name="tb_db_name.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -263,11 +281,14 @@
   <data name="&gt;&gt;tb_db_name.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="tb_db_address.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="tb_db_address.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 149</value>
   </data>
   <data name="tb_db_address.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 22</value>
+    <value>247, 26</value>
   </data>
   <data name="tb_db_address.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -284,11 +305,14 @@
   <data name="&gt;&gt;tb_db_address.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="tb_db_host.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="tb_db_host.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 177</value>
   </data>
   <data name="tb_db_host.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 22</value>
+    <value>299, 26</value>
   </data>
   <data name="tb_db_host.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -308,6 +332,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bt_add_address.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
+  </data>
+  <data name="bt_add_address.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="bt_add_address.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 148</value>
@@ -351,6 +378,9 @@
   <data name="&gt;&gt;pg_bd_info.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="lb_db_info.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="lb_db_info.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 262</value>
   </data>
@@ -371,6 +401,9 @@
   </data>
   <data name="&gt;&gt;lb_db_info.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="bt_add_create.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
   </data>
   <data name="bt_add_create.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -406,7 +439,7 @@
     <value>4</value>
   </data>
   <data name="lb_add_create_db.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+    <value>Calibri, 16.2pt, style=Bold</value>
   </data>
   <data name="lb_add_create_db.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -459,6 +492,9 @@
   <data name="&gt;&gt;pb_logo.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="bt_cancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="bt_cancel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -498,6 +534,9 @@
   <metadata name="sfd_save_db.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>147, 17</value>
   </metadata>
+  <data name="bt_test_db.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9pt</value>
+  </data>
   <data name="bt_test_db.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>

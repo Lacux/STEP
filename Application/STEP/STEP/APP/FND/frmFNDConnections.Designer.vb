@@ -55,6 +55,7 @@ Partial Class fnd_Connections
 		Me.db_address = New System.Windows.Forms.ColumnHeader()
 		Me.db_host = New System.Windows.Forms.ColumnHeader()
 		Me.db_type = New System.Windows.Forms.ColumnHeader()
+		Me.lb_wait = New System.Windows.Forms.Label()
 		Me.gb_Menu.SuspendLayout
 		CType(Me.pb_logo,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
@@ -138,17 +139,17 @@ Partial Class fnd_Connections
 		'cb_APPLanguage
 		'
 		Me.cb_APPLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+		resources.ApplyResources(Me.cb_APPLanguage, "cb_APPLanguage")
 		Me.cb_APPLanguage.FormattingEnabled = true
 		Me.cb_APPLanguage.Items.AddRange(New Object() {resources.GetString("cb_APPLanguage.Items")})
-		resources.ApplyResources(Me.cb_APPLanguage, "cb_APPLanguage")
 		Me.cb_APPLanguage.Name = "cb_APPLanguage"
 		AddHandler Me.cb_APPLanguage.SelectedIndexChanged, AddressOf Me.Cb_APPLanguageSelectedIndexChanged
 		'
 		'lw_dblist
 		'
 		Me.lw_dblist.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.db_type_v, Me.db_name, Me.db_address, Me.db_host, Me.db_type})
-		Me.lw_dblist.FullRowSelect = true
 		resources.ApplyResources(Me.lw_dblist, "lw_dblist")
+		Me.lw_dblist.FullRowSelect = true
 		Me.lw_dblist.Name = "lw_dblist"
 		Me.lw_dblist.UseCompatibleStateImageBehavior = false
 		Me.lw_dblist.View = System.Windows.Forms.View.Details
@@ -174,10 +175,19 @@ Partial Class fnd_Connections
 		'
 		resources.ApplyResources(Me.db_type, "db_type")
 		'
+		'lb_wait
+		'
+		Me.lb_wait.BackColor = System.Drawing.Color.Transparent
+		Me.lb_wait.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		resources.ApplyResources(Me.lb_wait, "lb_wait")
+		Me.lb_wait.ForeColor = System.Drawing.Color.DarkGreen
+		Me.lb_wait.Name = "lb_wait"
+		'
 		'fnd_Connections
 		'
 		resources.ApplyResources(Me, "$this")
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+		Me.Controls.Add(Me.lb_wait)
 		Me.Controls.Add(Me.lw_dblist)
 		Me.Controls.Add(Me.cb_APPLanguage)
 		Me.Controls.Add(Me.lb_APPLanguagle)
@@ -193,13 +203,14 @@ Partial Class fnd_Connections
 		Me.MinimizeBox = false
 		Me.Name = "fnd_Connections"
 		AddHandler Activated, AddressOf Me.Fnd_ConnectionsActivated
+		AddHandler FormClosing, AddressOf Me.Fnd_ConnectionsFormClosing
 		AddHandler FormClosed, AddressOf Me.Fnd_ConnectionsFormClosed
-		AddHandler Load, AddressOf Me.Fnd_ConnectionsLoad
 		Me.gb_Menu.ResumeLayout(false)
 		CType(Me.pb_logo,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private lb_wait As System.Windows.Forms.Label
 	Private db_type_v As System.Windows.Forms.ColumnHeader
 	Private lw_dblist As System.Windows.Forms.ListView
 	Private db_type As System.Windows.Forms.ColumnHeader
